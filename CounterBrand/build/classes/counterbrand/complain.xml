@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--><root>
+<complain id="1"><name>ZARA</name><industry>패션</industry><sub>환불/교환/AS</sub><time>0</time><content>123</content><title>1</title></complain><complain id="2"><name>신라</name><industry>숙박</industry><sub>편의시설</sub><time>0</time><content>먹고싶다</content><title>신라면</title></complain><complain id="3"><name>서브웨이</name><industry>음식</industry><sub>맛</sub><time>0</time><content>배고프다</content><title>벌써아침</title></complain><complain id="4"><name>힐튼</name><industry>숙박</industry><sub>안전</sub><time>0</time><content>휴...</content><title>이제 끝났다....</title></complain><complain id="5"><name>ZARA</name><industry>패션</industry><sub>환불/교환/AS</sub><time>Thu Nov 09 10:41:10 KST 2017</time><content>aaaaa</content><title>a</title></complain><complain id="6"><name>봉구스</name><industry>음식</industry><sub>위생</sub><time>Thu Nov 09 14:58:51 KST 2017</time><content>dd</content><title>good</title></complain></root>

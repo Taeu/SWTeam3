@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLComplainReadController">
+   <children>
+      <MenuBar layoutX="152.0" prefHeight="25.0" prefWidth="448.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="고객불만">
+               <items>
+                  <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" text="불만작성" />
+                  <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" text="불만조회" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="랭킹">
+               <items>
+                  <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="마이페이지">
+               <items>
+                  <MenuItem fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="24.0" layoutY="70.0" prefHeight="15.0" prefWidth="45.0" text="산업 : " />
+      <ChoiceBox fx:id="choiceBoxIndustry" layoutX="69.0" layoutY="66.0" onMouseClicked="#choiceBoxIndustryCliked" prefHeight="23.0" prefWidth="106.0" />
+      <Label layoutX="198.0" layoutY="70.0" prefHeight="15.0" prefWidth="45.0" text="브랜드 :" />
+      <ChoiceBox fx:id="choiceBoxName" layoutX="251.0" layoutY="66.0" onMouseClicked="#choiceBoxNameCliked" prefHeight="23.0" prefWidth="106.0" />
+      <Label layoutX="374.0" layoutY="70.0" prefHeight="15.0" prefWidth="60.0" text="세부사항 :" />
+      <ChoiceBox fx:id="choiceBoxSub" layoutX="434.0" layoutY="66.0" onMouseClicked="#choiceBoxSubCliked" prefHeight="23.0" prefWidth="106.0" />
+      <Label layoutX="24.0" layoutY="38.0" prefHeight="15.0" prefWidth="60.0" text="불만조회" />
+      <TableView fx:id="tableViewComplain" layoutX="24.0" layoutY="107.0" onMouseClicked="#ComplainReadDetailCliked" prefHeight="260.0" prefWidth="538.0">
+         <columns>
+            <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="브랜드" />
+            <TableColumn fx:id="tableColumnSub" prefWidth="75.0" text="세부항목" />
+            <TableColumn fx:id="tableColumnTitle" prefWidth="342.0" text="제목" />
+            <TableColumn fx:id="tableColumnId" prefWidth="21.0" text="id" visible="false" />
+            <TableColumn fx:id="tableColumnIndustry" prefWidth="21.0" text="industry" visible="false" />
+            <TableColumn fx:id="tableColumnContent" prefWidth="21.0" text="content" visible="false" />
+            <TableColumn fx:id="tableColumnTime" prefWidth="21.0" text="time" visible="false" />
+         </columns>
+      </TableView>
+      <Label fx:id="labelCounterBrand" layoutX="14.0" layoutY="2.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
