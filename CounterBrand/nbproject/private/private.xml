@@ -3,13 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLMainPageController.java</file>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLComplainDetailReadController.java</file>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/complain.xml</file>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLComplainWriteController.java</file>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/XMLComplainManager.java</file>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/ComplainDetail.java</file>
-            <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLComplainReadController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/BrandDetail.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/MenuController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLCustomerRegisterController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/XMLUserCustomerManager.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/CounterBrand.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLMainPageController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FeedbackDetail.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLComplainDetailFeedbackReadController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/UserBrandDetail.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/XMLBrandManager.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/userCustomer.xml</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/Feedback.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLLoginController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/complain.xml</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLComplainDetailReadController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLBrandRegisterController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLComplainWriteController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/XMLComplainManager.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/FXMLComplainReadController.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/ComplainDetail.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/RankDetail.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/XMLUserBrandManager.java</file>
+            <file>file:/C:/Users/user/Desktop/cc/CounterBrand/src/counterbrand/UserCustomerDetail.java</file>
         </group>
     </open-files>
 </project-private>

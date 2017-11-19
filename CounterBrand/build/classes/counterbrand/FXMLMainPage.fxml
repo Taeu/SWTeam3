@@ -35,10 +35,11 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnComplainWrite" layoutX="433.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnComplainWriteCliked" prefHeight="52.0" prefWidth="134.0" text="Q. 불만작성" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="btnComplainWrite" layoutX="441.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnComplainWriteCliked" prefHeight="52.0" prefWidth="134.0" text="Q. 불만작성" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <Button fx:id="btnLogin" layoutX="511.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnLoginClicked" prefHeight="25.0" prefWidth="64.0" text="Login" />
    </children>
 </AnchorPane>

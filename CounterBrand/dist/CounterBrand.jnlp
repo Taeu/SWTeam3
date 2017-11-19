@@ -8,15 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-<<<<<<< HEAD
-    <jar href="CounterBrand.jar" size="45676" download="eager" />
-=======
-<<<<<<< HEAD
-    <jar href="CounterBrand.jar" size="39274" download="eager" />
-=======
-    <jar href="CounterBrand.jar" size="43774" download="eager" />
->>>>>>> e38ec58255670686d8d5a083a9b9974405974f57
->>>>>>> 0f7d9c6884a2cc7d08cb4936fc0efd4286d479c8
+    <jar href="CounterBrand.jar" size="52348" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CounterBrand" >
     <param name="requiredFXVersion" value="8.0+"/>

@@ -27,6 +27,7 @@ public class CounterBrand extends Application {
         
         stage.setScene(scene);
         stage.show();
+        
     }
 
     /**

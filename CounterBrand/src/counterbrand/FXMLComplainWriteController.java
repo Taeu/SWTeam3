@@ -173,8 +173,8 @@ public class FXMLComplainWriteController implements Initializable {
         HashMap complainSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-            complainSubmitList = complainManager.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
-            idhm = complainManager.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            complainSubmitList = complainManager.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            idhm = complainManager.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complain.xml");
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
@@ -183,26 +183,10 @@ public class FXMLComplainWriteController implements Initializable {
 
         while (iterator.hasNext()) {
             String key = iterator.next();
-            /* data.clear();
-            tempidhm = (HashMap) hm.get(key);
-            data.add(new ComplainDetails(key, tempidhm.get("id").toString()));
-             */
             a = Integer.parseInt(key);
         }
         a = a + 1;
-        ////////////// id 도 들어갈 때 마다 하나씩 증가해야하는 것.
-        //hm.put("id", industry.);
-        ////////////// choice 블럭에 잇는 것들도
-        // 아래는 제대로 넣어지는군
-
-        System.out.println(Integer.toString(a));
-        System.out.println(choiceBoxName.getValue());
-        System.out.println(choiceBoxIndustry.getValue());
-        System.out.println(choiceBoxSub.getValue());
-        System.out.println(date.toString());
-        System.out.println(textFieldTitle.getText());
-        System.out.println(textAreaContent.getText());
-
+     
         hm.put("id", Integer.toString(a));
         hm.put("name", choiceBoxName.getValue());
         hm.put("industry", choiceBoxIndustry.getValue());
@@ -210,21 +194,17 @@ public class FXMLComplainWriteController implements Initializable {
         hm.put("time", date.toString());
         hm.put("title", textFieldTitle.getText());
         hm.put("content", textAreaContent.getText());
-        System.out.println(hm);
+        
         if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-                complainManager.editXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
-                complainManager.editXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+                complainManager.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
+                complainManager.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
                 
-                System.out.println("ok");
             } catch (Exception e) {
             }
-            this.id++; // 이 부분 바꿔야하는데,
-            a = a + 1;
         } else if (complainSubmitList.get(Integer.toString(a)) != null) {
-            this.id++;
-            a = a + 1;
+           
         }
         complainDetailReadOpen();
         // close this scene.

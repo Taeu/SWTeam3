@@ -11,7 +11,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLMainPageController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLLoginController">
    <children>
       <MenuBar layoutX="153.0" prefHeight="25.0" prefWidth="442.0">
          <menus>
@@ -44,7 +45,7 @@
       <PasswordField layoutX="223.0" layoutY="236.0" prefHeight="23.0" prefWidth="175.0" />
       <CheckBox layoutX="202.0" layoutY="138.0" mnemonicParsing="false" text="기업회원" />
       <CheckBox layoutX="300.0" layoutY="138.0" mnemonicParsing="false" text="개인회원" />
-      <Button layoutX="170.0" layoutY="289.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="227.0" text="기업 회원가입" />
-      <Button layoutX="170.0" layoutY="330.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="227.0" text="일반 회원가입" />
+      <Button fx:id="btnBrandRegister" layoutX="170.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnBrandRegisterClicked" prefHeight="23.0" prefWidth="227.0" text="기업 회원가입" />
+      <Button fx:id="btnCustomerRegister" layoutX="170.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnCustomerRegisterClicked" prefHeight="23.0" prefWidth="227.0" text="일반 회원가입" />
    </children>
 </AnchorPane>

@@ -9,11 +9,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLComplainDetailFeedbackReadController">
    <children>
-      <TextArea fx:id="textAreaFeedbackContent" layoutX="31.0" layoutY="436.0" prefHeight="119.0" prefWidth="523.0" />
-      <MenuBar layoutX="159.0" layoutY="10.0" prefHeight="25.0" prefWidth="450.0">
+      <TextArea fx:id="textAreaFeedbackContent" layoutX="31.0" layoutY="422.0" prefHeight="119.0" prefWidth="523.0" />
+      <MenuBar layoutX="136.0" prefHeight="25.0" prefWidth="450.0">
          <menus>
             <Menu mnemonicParsing="false" text="고객불만">
                <items>
@@ -48,16 +47,17 @@
          </font>
       </Label>
       <Label layoutX="31.0" layoutY="407.0" prefHeight="15.0" prefWidth="82.0" text="피드백 내용 :" />
-      <Label fx:id="labelCounterBrand" layoutX="17.0" layoutY="12.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
+      <Label fx:id="labelCounterBrand" layoutX="5.0" layoutY="2.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnFeedbackSubmit" layoutX="490.0" layoutY="564.0" mnemonicParsing="false" onAction="#btnFeedbackSubmitClicked" prefHeight="36.0" prefWidth="78.0" text="피드백접수" />
-      <Label layoutX="169.0" layoutY="140.0" prefHeight="19.0" prefWidth="94.0" text="불만세부조회" underline="true">
+      <Button fx:id="btnFeedbackSubmit" layoutX="491.0" layoutY="555.0" mnemonicParsing="false" onAction="#btnFeedbackSubmitClicked" prefHeight="36.0" prefWidth="78.0" text="피드백접수" />
+      <Label layoutX="25.0" layoutY="45.0" prefHeight="19.0" prefWidth="94.0" text="불만세부조회" underline="true">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
+      <Label fx:id="labelTitle" layoutX="84.0" layoutY="120.0" prefHeight="15.0" prefWidth="160.0" text="title" />
    </children>
 </AnchorPane>

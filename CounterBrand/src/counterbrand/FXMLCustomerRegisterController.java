@@ -16,7 +16,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
@@ -29,7 +28,7 @@ import javafx.stage.Stage;
  *
  * @author JunHo
  */
-public class FXMLBrandRegisterController implements Initializable {
+public class FXMLCustomerRegisterController implements Initializable {
 
     @FXML
     private MenuItem menuComplainWrite;
@@ -42,26 +41,29 @@ public class FXMLBrandRegisterController implements Initializable {
     @FXML
     private Label labelCounterBrand;
     @FXML
-    private TextField textFieldID;
-    @FXML
-    private TextField textFieldSNSAddress;
-    @FXML
-    private TextField textFieldEmail;
-    @FXML
-    private PasswordField passwordFieldPW;
-    @FXML
-    private ChoiceBox<String> choiceBoxIndustry;
-    @FXML
-    private ChoiceBox<String> choiceBoxSales;
-    @FXML
-    private Button btnBrandRegister;
-    
-    private ObservableList<UserBrandDetail> data;
-    private XMLUserBrandManager brandManger;
-    private HashMap hm;
-    private HashMap idhm;
+    private TextField textFieldId;
     @FXML
     private TextField textFieldName;
+    private TextField textFieldYearOfBirth;
+    @FXML
+    private TextField textFieldGender;
+    @FXML
+    private TextField textFieldPhoneNumber;
+    @FXML
+    private TextField textFieldEmailAdress;
+    @FXML
+    private TextField textFieldJob;
+    @FXML
+    private TextField passwordFieldPw;
+    @FXML
+    private Button btnCustomerRegister;
+    
+    private ObservableList<UserCustomerDetail> data;
+    private XMLUserCustomerManager customerManger;
+    private HashMap hm;
+    private HashMap temphm;
+    private HashMap idhm;
+    private HashMap tempidhm;
 
     /**
      * Initializes the controller class.
@@ -69,8 +71,6 @@ public class FXMLBrandRegisterController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        choiceBoxIndustry.getItems().addAll("패션", "음식", "숙박");
-        choiceBoxSales.getItems().addAll("0~100억", "100억~500억", "500억~2000억", "2000억 이상");
     }    
 
     @FXML
@@ -94,7 +94,7 @@ public class FXMLBrandRegisterController implements Initializable {
     }
 
     @FXML
-    private void btnSignInSubmitCliked(ActionEvent event) {
+    private void btnCustomerRegisterClicked(ActionEvent event) {
         int a = 0;
         Date date = new Date();
         System.out.println(date.toString());
@@ -116,23 +116,26 @@ public class FXMLBrandRegisterController implements Initializable {
         */
         // AF1 끝
 
-        brandManger = new XMLUserBrandManager();
+        customerManger = new XMLUserCustomerManager();
         hm = new HashMap();
         idhm = new HashMap();
-        HashMap brandSubmitList = new HashMap();
+        HashMap customerSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-            brandSubmitList = brandManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
-            idhm = brandManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
+            customerSubmitList = customerManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml");
+            idhm = customerManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml");
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Iterator<String> iterator = brandSubmitList.keySet().iterator();
-        System.out.println(iterator);
+        Iterator<String> iterator = idhm.keySet().iterator();
+
         while (iterator.hasNext()) {
-            System.out.println("key");
             String key = iterator.next();
+            /* data.clear();
+            tempidhm = (HashMap) hm.get(key);
+            data.add(new ComplainDetails(key, tempidhm.get("id").toString().trim()));
+             */
             a = Integer.parseInt(key);
         }
         a = a + 1;
@@ -142,27 +145,29 @@ public class FXMLBrandRegisterController implements Initializable {
         // 아래는 제대로 넣어지는군
 
         System.out.println(Integer.toString(a));
-        System.out.println(textFieldID.getText());
-        System.out.println(passwordFieldPW.getText());
+        System.out.println(textFieldId.getText());
+        System.out.println(passwordFieldPw.getText());
         System.out.println(textFieldName.getText());
-        System.out.println(textFieldSNSAddress.getText());
-        System.out.println(textFieldEmail.getText());
-        System.out.println(choiceBoxIndustry.getValue());
-        System.out.println(choiceBoxSales.getValue());
+        System.out.println(textFieldYearOfBirth.getText());
+        System.out.println(textFieldGender.getText());
+        System.out.println(textFieldPhoneNumber.getText());
+        System.out.println(textFieldEmailAdress.getText());
+        System.out.println(textFieldJob.getText());
 
         hm.put("num", Integer.toString(a));
-        hm.put("id", textFieldID.getText());
-        hm.put("password", passwordFieldPW.getText());
+        hm.put("id", textFieldId.getText());
+        hm.put("password", passwordFieldPw.getText());
         hm.put("name", textFieldName.getText());
-        hm.put("SNSAddress", textFieldSNSAddress.getText());
-        hm.put("Email", textFieldEmail.getText());
-        hm.put("industry", choiceBoxIndustry.getValue());
-        hm.put("sales", choiceBoxSales.getValue());
+        hm.put("gender", textFieldGender.getText());
+        hm.put("birth", textFieldYearOfBirth.getText());
+        hm.put("email", textFieldEmailAdress.getText());
+        hm.put("phone", textFieldPhoneNumber.getText());
+        hm.put("job", textFieldJob.getText());
         System.out.println(hm);
-        if (brandSubmitList == null || brandSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
+        if (customerSubmitList == null || customerSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-                brandManger.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
+                customerManger.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml", hm);
                 
                 System.out.println("ok");
             } catch (Exception e) {
@@ -170,14 +175,18 @@ public class FXMLBrandRegisterController implements Initializable {
             
             a = a + 1;
             
-        } else if (brandSubmitList.get(Integer.toString(a)) != null) {
+        } else if (customerSubmitList.get(Integer.toString(a)) != null) {
             a = a + 1;
         }
         
         // close this scene.
         Stage stageThis;
-        stageThis = (Stage) btnBrandRegister.getScene().getWindow();
+        stageThis = (Stage) btnCustomerRegister.getScene().getWindow();
         stageThis.close();
+    }
+
+    @FXML
+    private void textFieldYearOfBirth(ActionEvent event) {
     }
     
 }

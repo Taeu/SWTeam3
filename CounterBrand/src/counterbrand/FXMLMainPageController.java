@@ -36,9 +36,11 @@ public class FXMLMainPageController implements Initializable {
     @FXML
     private MenuItem menuMypage;
     @FXML
+    private Label labelCounterBrand;
+    @FXML
     private Button btnComplainWrite;
     @FXML
-    private Label labelCounterBrand;
+    private Button btnLogin;
 
     /**
      * Initializes the controller class.
@@ -93,6 +95,16 @@ public class FXMLMainPageController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void btnLoginClicked(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
 }
