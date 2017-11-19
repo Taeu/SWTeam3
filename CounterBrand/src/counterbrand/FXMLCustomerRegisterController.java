@@ -190,7 +190,6 @@ public class FXMLCustomerRegisterController implements Initializable {
         stageThis.close();
         showAlert();
     }
-<<<<<<< HEAD
     void showAlert() {
         Alert.AlertType AlterType = null;
         Alert alert = new Alert(AlterType.INFORMATION);
@@ -205,8 +204,4 @@ public class FXMLCustomerRegisterController implements Initializable {
         });
     }
 
-=======
-
-    
->>>>>>> CodeUpdate_Taeu
 }

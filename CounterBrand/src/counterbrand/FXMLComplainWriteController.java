@@ -187,7 +187,7 @@ public class FXMLComplainWriteController implements Initializable {
             a = Integer.parseInt(key);
         }
         a = a + 1;
-     
+        System.out.println("id"+a);
         hm.put("id", Integer.toString(a));
         hm.put("name", choiceBoxName.getValue());
         hm.put("industry", choiceBoxIndustry.getValue());
@@ -198,6 +198,7 @@ public class FXMLComplainWriteController implements Initializable {
         
         if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
+                System.out.println("edit");
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
                 complainManager.editXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
                 complainManager.editXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);

@@ -30,6 +30,28 @@ import javafx.stage.Stage;
  */
 public class FXMLLoginController implements Initializable {
 
+    @FXML
+    private MenuItem menuComplainWrite;
+    @FXML
+    private MenuItem menuComplainRead;
+    @FXML
+    private MenuItem menuRankView;
+    @FXML
+    private MenuItem menuMypage;
+    @FXML
+    private Label labelCounterBrand;
+    @FXML
+    private TextField textFeildLoginID;
+    @FXML
+    private PasswordField textFeildLoginPW;
+    @FXML
+    private Button btnBrandRegister;
+    @FXML
+    private Button btnCustomerRegister;
+    @FXML
+    private RadioButton radioLoginType;
+    @FXML
+    private Button btnLogin;
 
     /**
      * Initializes the controller class.
@@ -39,21 +61,24 @@ public class FXMLLoginController implements Initializable {
         // TODO
     }    
 
-
-    private void btnBrandRegisterClicked(ActionEvent event) throws IOException{
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLBrandRegister.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void menuComplainWriteCliked(ActionEvent event) {
     }
 
-    private void btnCustomerRegisterClicked(ActionEvent event) throws IOException{
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLCustomerRegister.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    private void menuComplainReadCliked(ActionEvent event) {
+    }
+
+    @FXML
+    private void menuRankViewCliked(ActionEvent event) {
+    }
+
+    @FXML
+    private void menuMypageCliked(ActionEvent event) {
+    }
+
+    @FXML
+    private void labelCounterBrandCliked(MouseEvent event) {
     }
 
     @FXML
@@ -63,20 +88,16 @@ public class FXMLLoginController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        
     }
 
     @FXML
     private void btnCustomerRegisterClicked(ActionEvent event) throws IOException {
-         Stage stage = new Stage();
+        Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLCustomerRegister.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
-    @FXML
-    private void btnLoginClicked(ActionEvent event) {
-         
-        
-    }
+    
 }

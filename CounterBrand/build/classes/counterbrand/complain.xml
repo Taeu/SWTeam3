@@ -69,30 +69,4 @@ and open the template in the editor.
     <title>s</title>
     <fd>수정완료</fd>
 </complain>
-<complain id="9">
-    <name>서브웨이</name>
-    <industry>음식</industry>
-    <sub>맛</sub>
-    <time>Sun Nov 19 11:57:46 KST 2017</time>
-    <content>제발 돼라</content>
-    <title>please</title>
-    <feedbackDetail> ~~~oh yeah~~~ 
-        <fdcontent> ~~~oh yeah~~~ </fdcontent>
-    </feedbackDetail>
-</complain>
-<complain id="10">
-    <name>유니클로</name>
-    <industry>패션</industry>
-    <sub>환불/교환/AS</sub>
-    <time>Sun Nov 19 12:16:50 KST 2017</time>
-    <content>sdd</content>
-    <title>s</title>
-    <feedbackDetail> ~~~oh yeah~~~ 
-        <fdcontent> ~~~oh yeah~~~ </fdcontent>
-        
-    </feedbackDetail>
-    
-</complain>
-
-<complain id="11"><name>홍콩반점</name><industry>음식</industry><sub>서비스</sub><time>Sun Nov 19 20:35:23 KST 2017</time><content>asdasd</content><title>ds</title></complain></root>
-
+</root>

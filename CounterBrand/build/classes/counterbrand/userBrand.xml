@@ -4,7 +4,6 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
 
-<<<<<<< HEAD
 <userbrand num="1">
     <id>qq</id>
     <password>qq</password>
@@ -24,11 +23,3 @@ and open the template in the editor.
     <Email>ww</Email>
 </userbrand>
 <userbrand num="3"><id>sdf</id><password>sdf</password><name>sdf</name><industry>음식</industry><sales>100억~500억</sales><SNSAddress>sdf</SNSAddress><Email>sdf</Email></userbrand></root>
-=======
-
-<<<<<<< HEAD
-<userbrand num="1"><id>1</id><password>11</password><name>1</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>1</SNSAddress><Email>1</Email></userbrand><userbrand num="1"><id>2</id><password>2</password><name>2</name><industry>숙박</industry><sales>0~100억</sales><SNSAddress>2</SNSAddress><Email>2</Email></userbrand><userbrand num="2"><id>sfd</id><password>adsf</password><name>adsf</name><industry>패션</industry><sales>100억~500억</sales><SNSAddress>asdf</SNSAddress><Email>asdf</Email></userbrand><userbrand num="3"><id>qwde</id><password>asda</password><name>dsad</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>asd</SNSAddress><Email>asd</Email></userbrand></root>
->>>>>>> CodeUpdate_Taeu
-=======
-<userbrand num="1"><id>1</id><password>11</password><name>1</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>1</SNSAddress><Email>1</Email></userbrand><userbrand num="1"><id>2</id><password>2</password><name>2</name><industry>숙박</industry><sales>0~100억</sales><SNSAddress>2</SNSAddress><Email>2</Email></userbrand><userbrand num="2"><id>sfd</id><password>adsf</password><name>adsf</name><industry>패션</industry><sales>100억~500억</sales><SNSAddress>asdf</SNSAddress><Email>asdf</Email></userbrand><userbrand num="3"><id>qwde</id><password>asda</password><name>dsad</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>asd</SNSAddress><Email>asd</Email></userbrand></root>
->>>>>>> CodeUpdate_Taeu

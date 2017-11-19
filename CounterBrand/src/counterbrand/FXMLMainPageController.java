@@ -41,6 +41,7 @@ public class FXMLMainPageController implements Initializable {
     private Button btnComplainWrite;
     @FXML
     private Button btnLogin;
+    
 
     /**
      * Initializes the controller class.
@@ -99,12 +100,14 @@ public class FXMLMainPageController implements Initializable {
 
     @FXML
     private void btnLoginClicked(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
+         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         
     }
+
+    
 
 }
