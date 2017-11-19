@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--><root>
+    
+<userbrand num="1">
+    <id>asd</id>
+    <password>aasdas</password>
+    <name>asdas</name>
+    <industry>음식</industry>
+    <sales>100억~500억</sales>
+    <SNSAddress>asda</SNSAddress>
+    <Email>sada</Email>
+</userbrand>
+<userbrand num="1">
+    <id>fsd</id>
+    <password>sdfsd</password>
+    <name>sdfsdfsd</name>
+    <industry>음식</industry>
+    <sales>500억~2000억</sales>
+    <SNSAddress>sfdssdf</SNSAddress>
+    <Email>sdfsdfs</Email>
+</userbrand>
+<userbrand num="1"><id>sdfsdfsd</id><password>sfsdfsd</password><name>asdfsadf</name><industry>숙박</industry><sales>100억~500억</sales><SNSAddress>sdfsdf</SNSAddress><Email>sdfsd</Email></userbrand></root>
