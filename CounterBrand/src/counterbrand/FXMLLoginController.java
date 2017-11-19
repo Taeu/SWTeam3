@@ -13,6 +13,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -36,6 +39,14 @@ public class FXMLLoginController implements Initializable {
     private Button btnBrandRegister;
     @FXML
     private Button btnCustomerRegister;
+    @FXML
+    private TextField textFeildLoginID;
+    @FXML
+    private PasswordField textFeildLoginPW;
+    @FXML
+    private RadioButton radioLoginType;
+    @FXML
+    private Button btnLogin;
 
     /**
      * Initializes the controller class.
