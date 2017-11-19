@@ -78,7 +78,7 @@ public class FXMLComplainDetailReadController implements Initializable {
         data = FXCollections.observableArrayList();
         hm = new HashMap();
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Documents\\NetBeansProjects\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
+            hm = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,7 +107,7 @@ public class FXMLComplainDetailReadController implements Initializable {
             cdKey = tempComplainDetail.getId();
             
             try {
-                complainManager.deleteIdXML("C:\\Users\\user\\Documents\\NetBeansProjects\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
+                complainManager.deleteIdXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -166,7 +166,11 @@ public class FXMLComplainDetailReadController implements Initializable {
         hm = new HashMap();
         
             try {
+<<<<<<< HEAD
                 complainManager.addFeedbackXML("C:\\Users\\user\\Documents\\NetBeansProjects\\CounterBrand\\src\\counterbrand\\", "complain.xml", cdKey,"수정완료");
+=======
+                complainManager.addFeedbackXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", cdKey,"수정완료");
+>>>>>>> CodeUpdate
                 // addFeedbackXML(경로/이름/id/a/d.toString());
             } catch (Exception e) {
                 e.printStackTrace();
@@ -178,3 +182,9 @@ public class FXMLComplainDetailReadController implements Initializable {
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> CodeUpdate
