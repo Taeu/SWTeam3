@@ -177,3 +177,7 @@ public class FXMLComplainDetailReadController implements Initializable {
         
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e38ec58255670686d8d5a083a9b9974405974f57
