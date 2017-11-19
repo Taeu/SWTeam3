@@ -59,9 +59,7 @@ public class FXMLBrandRegisterController implements Initializable {
     private ObservableList<UserBrandDetail> data;
     private XMLUserBrandManager brandManger;
     private HashMap hm;
-    private HashMap temphm;
     private HashMap idhm;
-    private HashMap tempidhm;
     @FXML
     private TextField textFieldName;
 
@@ -124,25 +122,17 @@ public class FXMLBrandRegisterController implements Initializable {
         HashMap brandSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-<<<<<<< HEAD:CounterBrand/src/counterbrand/FXMLBrandRegisterController.java
             brandSubmitList = brandManger.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
             idhm = brandManger.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
-=======
-            brandSubmitList = brandManger.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
-            idhm = brandManger.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
->>>>>>> 0f7d9c6884a2cc7d08cb4936fc0efd4286d479c8:CounterBrand/src/FXMLBrandRegisterController.java
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Iterator<String> iterator = idhm.keySet().iterator();
+        Iterator<String> iterator = brandSubmitList.keySet().iterator();
         System.out.println(iterator);
         while (iterator.hasNext()) {
+            System.out.println("key");
             String key = iterator.next();
-            /* data.clear();
-            tempidhm = (HashMap) hm.get(key);
-            data.add(new ComplainDetails(key, tempidhm.get("id").toString().trim()));
-             */
             a = Integer.parseInt(key);
         }
         a = a + 1;
@@ -172,11 +162,7 @@ public class FXMLBrandRegisterController implements Initializable {
         if (brandSubmitList == null || brandSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-<<<<<<< HEAD:CounterBrand/src/counterbrand/FXMLBrandRegisterController.java
                 brandManger.editXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
-=======
-                brandManger.editXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
->>>>>>> 0f7d9c6884a2cc7d08cb4936fc0efd4286d479c8:CounterBrand/src/FXMLBrandRegisterController.java
                 
                 System.out.println("ok");
             } catch (Exception e) {
