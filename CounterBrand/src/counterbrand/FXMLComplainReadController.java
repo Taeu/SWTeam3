@@ -75,6 +75,7 @@ public class FXMLComplainReadController implements Initializable {
     private TableColumn<ComplainDetail, String> tableColumnTime;
     @FXML
     private Label labelCounterBrand;
+    FilePath fp = new FilePath();
 
     /**
      * Initializes the controller class.
@@ -93,7 +94,7 @@ public class FXMLComplainReadController implements Initializable {
         hm = new HashMap();
 
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            hm = complainManager.readXML(fp.a, "complain.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -144,7 +145,7 @@ public class FXMLComplainReadController implements Initializable {
         hm = new HashMap();
         HashMap complainDetailList = new HashMap();
         try {
-            complainDetailList = complainManager.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
+            complainDetailList = complainManager.readXML(fp.a, "complainDetail.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -161,7 +162,7 @@ public class FXMLComplainReadController implements Initializable {
 
         System.out.println("선택한 정보 :" + hm);
         try {
-            complainManager.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+            complainManager.editXML(fp.a, "complainDetail.xml", hm);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -247,7 +248,7 @@ public class FXMLComplainReadController implements Initializable {
         hm = new HashMap();
 
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            hm = complainManager.readXML(fp.a, "complain.xml");
 
         } catch (Exception e) {
             e.printStackTrace();

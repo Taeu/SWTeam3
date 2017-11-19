@@ -57,6 +57,7 @@ public class FXMLComplainDetailReadController implements Initializable {
     static int id = 0; //
     @FXML
     private Label labelTitle;
+    FilePath fp = new FilePath();
     /**
      * Initializes the controller class.
      */
@@ -93,7 +94,7 @@ public class FXMLComplainDetailReadController implements Initializable {
         data = FXCollections.observableArrayList();
         hm = new HashMap();
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
+            hm = complainManager.readXML(fp.a, "complainDetail.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -121,7 +122,7 @@ public class FXMLComplainDetailReadController implements Initializable {
             cdkey=tempComplainDetail.getId();
             // 조회한 정보 삭제 , 단순히 view 용이니.
             try {
-                complainManager.deleteIdXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
+                complainManager.deleteIdXML(fp.a, "complainDetail.xml", key);
 
             } catch (Exception e) {
                 e.printStackTrace();

@@ -27,6 +27,9 @@ public class CounterBrand extends Application {
         
         stage.setScene(scene);
         stage.show();
+        System.out.println("시작");
+        FilePath fp = new FilePath();
+        System.out.println(fp.a);
         
     }
 
