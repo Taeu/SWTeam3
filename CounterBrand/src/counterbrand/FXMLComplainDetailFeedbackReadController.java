@@ -83,7 +83,11 @@ public class FXMLComplainDetailFeedbackReadController implements Initializable {
         data = FXCollections.observableArrayList();
         hm = new HashMap();
         try {
+<<<<<<< HEAD
             hm = complainManager.readXML(fp.a, "complainDetail.xml");
+=======
+            hm = complainManager.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,7 +115,11 @@ public class FXMLComplainDetailFeedbackReadController implements Initializable {
             cdkey=tempComplainDetail.getId();
             // 조회한 정보 삭제 , 단순히 view 용이니.
             try {
+<<<<<<< HEAD
                 complainManager.deleteIdXML(fp.a, "complainDetail.xml", key);
+=======
+                complainManager.deleteIdXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -180,7 +188,11 @@ public class FXMLComplainDetailFeedbackReadController implements Initializable {
         HashMap complainSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
+<<<<<<< HEAD
             complainManager.addFeedbackXML(fp.a, "complainDetail.xml", cdkey, c, fbdate);
+=======
+            complainManager.addFeedbackXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", cdkey, c, fbdate);
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
         } catch (Exception e) { e.printStackTrace();}
         
         Iterator<String> iterator = idhm.keySet().iterator();
@@ -207,7 +219,11 @@ public class FXMLComplainDetailFeedbackReadController implements Initializable {
             cdkey=tempComplainDetail.getId();
             // 조회한 정보 삭제 , 단순히 view 용이니.
             try {
+<<<<<<< HEAD
                 complainManager.deleteIdXML(fp.a, "complainDetail.xml", key);
+=======
+                complainManager.deleteIdXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -222,8 +238,13 @@ public class FXMLComplainDetailFeedbackReadController implements Initializable {
         if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
+<<<<<<< HEAD
                 complainManager.editXML(fp.a, "complain.xml", hm);
                 complainManager.editXML(fp.a, "complainDetail.xml", hm);
+=======
+                complainManager.editXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
+                complainManager.editXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
                 
                 System.out.println("ok");
             } catch (Exception e) {}

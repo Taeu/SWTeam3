@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/userBrand.xml</file>
             <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/BrandDetail.java</file>
             <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLComplainDetailFeedbackReadController.java</file>
@@ -17,6 +18,14 @@
             <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLComplainReadController.java</file>
             <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLBrandRegisterController.java</file>
             <file>file:/C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FilePath.java</file>
+=======
+            <file>file:/C:/Users/JunHo/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLCustomerRegisterController.java</file>
+            <file>file:/C:/Users/JunHo/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/userCustomer.xml</file>
+            <file>file:/C:/Users/JunHo/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLComplainReadController.java</file>
+            <file>file:/C:/Users/JunHo/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLLoginController.java</file>
+            <file>file:/C:/Users/JunHo/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/FXMLBrandRegisterController.java</file>
+            <file>file:/C:/Users/JunHo/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/userBrand.xml</file>
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
         </group>
     </open-files>
 </project-private>

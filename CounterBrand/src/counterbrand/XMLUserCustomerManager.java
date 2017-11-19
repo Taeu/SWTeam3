@@ -63,7 +63,7 @@ public class XMLUserCustomerManager {
             Node nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                dataMapper.put("num", element.getElementsByTagName("num").item(0).getTextContent());
+                
                 dataMapper.put("id", element.getElementsByTagName("id").item(0).getTextContent());
                 dataMapper.put("password", element.getElementsByTagName("password").item(0).getTextContent());
                 dataMapper.put("name", element.getElementsByTagName("name").item(0).getTextContent());

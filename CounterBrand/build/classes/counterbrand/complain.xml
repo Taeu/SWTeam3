@@ -93,4 +93,8 @@ and open the template in the editor.
     </feedbackDetail>
     
 </complain>
+<<<<<<< HEAD
 <complain id="11"><name>홍콩반점</name><industry>음식</industry><sub>서비스</sub><time>Sun Nov 19 20:35:23 KST 2017</time><content>asdasd</content><title>ds</title></complain></root>
+=======
+<complain id="11"><name>홍콩반점</name><industry>음식</industry><sub>서비스</sub><time>Sun Nov 19 20:37:55 KST 2017</time><content>sdfs</content><title>dsfs</title></complain></root>
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79

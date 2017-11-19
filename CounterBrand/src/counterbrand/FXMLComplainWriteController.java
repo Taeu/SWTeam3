@@ -174,8 +174,13 @@ public class FXMLComplainWriteController implements Initializable {
         HashMap complainSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
+<<<<<<< HEAD
             complainSubmitList = complainManager.readXML(fp.a, "complain.xml");
             idhm = complainManager.readXML(fp.a, "complain.xml");
+=======
+            complainSubmitList = complainManager.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            idhm = complainManager.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
@@ -199,8 +204,13 @@ public class FXMLComplainWriteController implements Initializable {
         if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
+<<<<<<< HEAD
                 complainManager.editXML(fp.a, "complain.xml", hm);
                 complainManager.editXML(fp.a, "complainDetail.xml", hm);
+=======
+                complainManager.editXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
+                complainManager.editXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+>>>>>>> 43f8dace8b210d8558de6b058ca879349305db79
                 
             } catch (Exception e) {
             }
