@@ -21,7 +21,7 @@ public class CounterBrand extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLBrandRegister.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));
         
         Scene scene = new Scene(root);
         

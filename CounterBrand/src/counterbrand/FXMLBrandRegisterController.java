@@ -122,8 +122,8 @@ public class FXMLBrandRegisterController implements Initializable {
         HashMap brandSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-            brandSubmitList = brandManger.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
-            idhm = brandManger.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
+            brandSubmitList = brandManger.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
+            idhm = brandManger.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
@@ -162,7 +162,7 @@ public class FXMLBrandRegisterController implements Initializable {
         if (brandSubmitList == null || brandSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-                brandManger.editXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
+                brandManger.editXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
                 
                 System.out.println("ok");
             } catch (Exception e) {

@@ -8,6 +8,7 @@ package counterbrand;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -49,6 +50,7 @@ public class XMLComplainManager {
     }
 
     private HashMap dataConvert() {
+        System.out.println("dataconvert start");
         HashMap xmlDataHashMap = new HashMap();
         HashMap dataMapper;
 
@@ -60,9 +62,13 @@ public class XMLComplainManager {
         }
         //if("complain".equals(nList.item(0).getNodeName()))
         //{
+        
+            System.out.println("제대로읽었으면 7num"+nList.getLength());
         for (int i = 0; i < nList.getLength(); i++) {
             dataMapper = new HashMap();
             Node nNode = nList.item(i);
+            
+            System.out.println("dataconvert start");
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
 
@@ -75,6 +81,8 @@ public class XMLComplainManager {
                 dataMapper.put("title", element.getElementsByTagName("title").item(0).getTextContent());
                 xmlDataHashMap.put(element.getAttribute("id"), dataMapper);
             }
+            System.out.println("Dd'");
+                    
         }
 
         return xmlDataHashMap;
@@ -118,18 +126,8 @@ public class XMLComplainManager {
             Element title = docs.createElement("title");
             title.appendChild(docs.createTextNode(complaininfo.get("title").toString()));
             complain.appendChild(title);
-            
-            Element feedbackDetail = docs.createElement("feedbackDetail");
-            feedbackDetail.appendChild(docs.createTextNode(" ~~~oh yeah~~~ "));
-            complain.appendChild(feedbackDetail);
-            
-            Element fdcontent = docs.createElement("fdcontent");
-            fdcontent.appendChild(docs.createTextNode(" ~~~oh yeah~~~ "));
-            feedbackDetail.appendChild(fdcontent);
-            
-            
-            
-                   }
+           
+        }
 
         docs.getDocumentElement().normalize();
 
@@ -149,7 +147,6 @@ public class XMLComplainManager {
         for (int i = 0; i < nList.getLength(); i++) {
             Node nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                
                 Element element = (Element) nNode;
                 if (element.getAttribute("id").equals(id)) {
                     nNode.getParentNode().removeChild(nNode);
@@ -163,30 +160,31 @@ public class XMLComplainManager {
         StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
         TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
     }
-    public void addFeedbackXML(String filePath, String fileName, String id, String title ) throws IOException, ParserConfigurationException,
+    
+    public void addFeedbackXML(String filePath, String fileName, String id, String feedbackContent, Date feedbackTime) throws IOException, ParserConfigurationException,
             SAXException, TransformerConfigurationException, TransformerException {
-        System.out.println(" ADD FEEDBACK XML");
         xmlFile = new File(filePath, fileName);
         dbFactory = DocumentBuilderFactory.newInstance();
         dBuilder = dbFactory.newDocumentBuilder();
         doc = dBuilder.parse(xmlFile);
-
         
         NodeList nList = doc.getElementsByTagName("complain");
         for (int i = 0; i < nList.getLength(); i++) {
             Node nNode = nList.item(i);
-            
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                System.out.println(element);
                 if (element.getAttribute("id").equals(id)) {
-                        System.out.println("find ! Id is "+element.getAttribute("id"));
-                 
-                        Element fd = doc.createElement("fd");
-                        fd.appendChild(doc.createTextNode(title));
-                        element.appendChild(fd);
+                    Element feedback = doc.createElement("feedback");
+                    feedback.setAttribute("id", id);
+                    element.appendChild(feedback);
 
-                    
+                    Element feedbackDetailContent = doc.createElement("feedbackDetailContent");
+                    feedbackDetailContent.appendChild(doc.createTextNode(feedbackContent));
+                    feedback.appendChild(feedbackDetailContent);
+
+                    Element feedbackDetailTime = doc.createElement("feedbackDetailTime");
+                    feedbackDetailTime.appendChild(doc.createTextNode(feedbackTime.toString()));
+                    feedback.appendChild(feedbackDetailTime);
                 }
             }
         }
@@ -197,6 +195,4 @@ public class XMLComplainManager {
         StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
         TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
     }
-            
-            
-  }
+}

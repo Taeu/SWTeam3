@@ -19,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
@@ -30,7 +31,7 @@ import javafx.stage.Stage;
  *
  * @author user
  */
-public class FXMLComplainDetailReadController implements Initializable {
+public class FXMLComplainDetailFeedbackReadController implements Initializable {
 
     @FXML
     private MenuItem menuComplainWrite;
@@ -53,15 +54,18 @@ public class FXMLComplainDetailReadController implements Initializable {
     @FXML
     private Label labelTitle;
 
+    private String cdkey;
     private ObservableList<ComplainDetail> data;
     private XMLComplainManager complainManager;
     private XMLComplainManager tempComplainManager;
     private HashMap hm;
+    private HashMap idhm;
     private HashMap temphm;
-    private String cdKey;
-    
+    static int id = 0; //
     @FXML
     private Label labelCounterBrand;
+    @FXML
+    private Button btnFeedbackSubmit;
 
     /**
      * Initializes the controller class.
@@ -78,7 +82,7 @@ public class FXMLComplainDetailReadController implements Initializable {
         data = FXCollections.observableArrayList();
         hm = new HashMap();
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
+            hm = complainManager.readXML("C:\\Users\\Taeu\\Downloads\\CounterBrand\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -91,23 +95,22 @@ public class FXMLComplainDetailReadController implements Initializable {
             ComplainDetail tempComplainDetail
                     = new ComplainDetail(
                             key,
-                            temphm.get("industry").toString(),
-                            temphm.get("name").toString(),
-                            temphm.get("sub").toString(),
-                            temphm.get("time").toString(),
-                            temphm.get("title").toString(),
-                            temphm.get("content").toString());
+                            temphm.get("industry").toString().trim(),
+                            temphm.get("name").toString().trim(),
+                            temphm.get("sub").toString().trim(),
+                            temphm.get("time").toString().trim(),
+                            temphm.get("title").toString().trim(),
+                            temphm.get("content").toString().trim());
             labelName.setText(tempComplainDetail.getName());
             labelIndustry.setText(tempComplainDetail.getIndustry());
             labelSub.setText(tempComplainDetail.getSub());
             labelTitle.setText(tempComplainDetail.getTitle());
             textAreaContent.setText(tempComplainDetail.getContent());
+            
+            cdkey=tempComplainDetail.getId();
             // 조회한 정보 삭제 , 단순히 view 용이니.
-            
-            cdKey = tempComplainDetail.getId();
-            
             try {
-                complainManager.deleteIdXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
+                complainManager.deleteIdXML("C:\\Users\\Taeu\\Downloads\\CounterBrand\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -152,29 +155,81 @@ public class FXMLComplainDetailReadController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+       
     }
 
+
     @FXML
-    private void btnEDITcompleted(ActionEvent event) {
-       
-        String a = textAreaFeedbackContent.getText();
-        Date d = new Date();
-        System.out.println("cdKey is : "+cdKey);
-       
+    private void btnFeedbackSubmitClicked(ActionEvent event) {  //수정
+        int a = 0;
+        String c = textAreaFeedbackContent.getText();
+        Date fbdate = new Date();
+        System.out.println(fbdate.toString());
+        // AF 1 ) 누락정보
+        /*int r = nullCheck(
+                fbdate.toString(),
+                c);
+        if (r == 1) {
+            return;
+        }*/
+        // AF1 끝
+
         complainManager = new XMLComplainManager();
-        data = FXCollections.observableArrayList();
         hm = new HashMap();
+        HashMap complainSubmitList = new HashMap();
+        data = FXCollections.observableArrayList();
+        try {
+            complainManager.addFeedbackXML("C:\\Users\\Taeu\\Downloads\\CounterBrand\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", cdkey, c, fbdate);
+        } catch (Exception e) { e.printStackTrace();}
         
+        Iterator<String> iterator = idhm.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            a = Integer.parseInt(key);
+             temphm = (HashMap) hm.get(key);
+            ComplainDetail tempComplainDetail
+                    = new ComplainDetail(
+                            key,
+                            temphm.get("industry").toString().trim(),
+                            temphm.get("name").toString().trim(),
+                            temphm.get("sub").toString().trim(),
+                            temphm.get("time").toString().trim(),
+                            temphm.get("title").toString().trim(),
+                            temphm.get("content").toString().trim());
+            labelName.setText(tempComplainDetail.getName());
+            labelIndustry.setText(tempComplainDetail.getIndustry());
+            labelSub.setText(tempComplainDetail.getSub());
+            labelTitle.setText(tempComplainDetail.getTitle());
+            textAreaContent.setText(tempComplainDetail.getContent());
+            textAreaFeedbackContent.setText(tempComplainDetail.getContent());
+            
+            cdkey=tempComplainDetail.getId();
+            // 조회한 정보 삭제 , 단순히 view 용이니.
             try {
-                complainManager.addFeedbackXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", cdKey,"수정완료");
-                // addFeedbackXML(경로/이름/id/a/d.toString());
+                complainManager.deleteIdXML("C:\\Users\\Taeu\\Downloads\\CounterBrand\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-    // 완료된 페이지.fxml  // open 
+        a = a + 1;
 
+        hm.put("feedbackContent", textAreaContent.getText());
+        hm.put("feedbackTime", fbdate.toString());
+        System.out.println(hm);
         
+        if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
+            try {
+                // 넣기 전에 각 값들이 널이 아닌지 체크하기!
+                complainManager.editXML("C:\\Users\\Taeu\\Downloads\\CounterBrand\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
+                complainManager.editXML("C:\\Users\\Taeu\\Downloads\\CounterBrand\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+                
+                System.out.println("ok");
+            } catch (Exception e) {}
+            this.id++; // 이 부분 바꿔야하는데,
+        } else if (complainSubmitList.get(Integer.toString(a)) != null) {
+            this.id++;
+        }
     }
 
-
+}

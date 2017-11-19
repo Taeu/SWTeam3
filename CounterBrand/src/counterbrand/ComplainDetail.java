@@ -5,6 +5,8 @@
  */
 package counterbrand;
 
+import java.lang.String;
+import javafx.beans.property.StringProperty;
 
 /**
  *
@@ -12,18 +14,28 @@ package counterbrand;
  */
 public class ComplainDetail {
 
-    public ComplainDetail(String id, String name, String industry, String sub, String time, String content, String title) {
-        this.id = id;
-        this.name = name;
-        this.industry = industry;
-        this.sub = sub;
-        this.time = time;
-        this.content = content;
-        this.title = title;
+    private String id;
+    private String name;
+    private String industry;
+    private String sub;
+    private String time;
+    private String content;
+    private String title;
+    private FeedbackDetail feedbackDetail;
+    //private RatingDetail ratingDetail;
+    private boolean feedbackIsComplete;
+    
+    public ComplainDetail(String id, String industry, String name, String sub, String time, String title, String content) {
+        this.id = new String(id);
+        this.name = new String(name);
+        this.industry = new String(industry);
+        this.sub = new String(sub);
+        this.time = new String(time);
+        this.content = new String(content);
+        this.title = new String(title);
     }
-
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {
@@ -31,7 +43,7 @@ public class ComplainDetail {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -39,7 +51,7 @@ public class ComplainDetail {
     }
 
     public String getIndustry() {
-        return industry;
+        return this.industry;
     }
 
     public void setIndustry(String industry) {
@@ -47,7 +59,7 @@ public class ComplainDetail {
     }
 
     public String getSub() {
-        return sub;
+        return this.sub;
     }
 
     public void setSub(String sub) {
@@ -55,7 +67,7 @@ public class ComplainDetail {
     }
 
     public String getTime() {
-        return time;
+        return this.time;
     }
 
     public void setTime(String time) {
@@ -63,7 +75,7 @@ public class ComplainDetail {
     }
 
     public String getContent() {
-        return content;
+        return this.content;
     }
 
     public void setContent(String content) {
@@ -71,19 +83,16 @@ public class ComplainDetail {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
-
-    private String id;
-    private String name;
-    private  String industry;
-    private String sub;
-    private String time;
-    private String content;
-    private String title;
-
+    
+    /*수정
+    public int remainTime(){
+        return dif(this.time, ratingDetail.time);
+    
+    }*/
 }

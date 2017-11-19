@@ -93,7 +93,7 @@ public class FXMLComplainReadController implements Initializable {
         hm = new HashMap();
 
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            hm = complainManager.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -144,7 +144,7 @@ public class FXMLComplainReadController implements Initializable {
         hm = new HashMap();
         HashMap complainDetailList = new HashMap();
         try {
-            complainDetailList = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
+            complainDetailList = complainManager.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -161,7 +161,7 @@ public class FXMLComplainReadController implements Initializable {
 
         System.out.println("선택한 정보 :" + hm);
         try {
-            complainManager.editXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+            complainManager.editXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -247,7 +247,7 @@ public class FXMLComplainReadController implements Initializable {
         hm = new HashMap();
 
         try {
-            hm = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            hm = complainManager.readXML("C:\\Users\\Taeu\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
