@@ -185,7 +185,7 @@ public class FXMLComplainWriteController implements Initializable {
             String key = iterator.next();
             /* data.clear();
             tempidhm = (HashMap) hm.get(key);
-            data.add(new ComplainDetails(key, tempidhm.get("id").toString().trim()));
+            data.add(new ComplainDetails(key, tempidhm.get("id").toString()));
              */
             a = Integer.parseInt(key);
         }

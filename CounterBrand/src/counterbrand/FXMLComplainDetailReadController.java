@@ -7,6 +7,7 @@ package counterbrand;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ResourceBundle;
@@ -57,6 +58,8 @@ public class FXMLComplainDetailReadController implements Initializable {
     private XMLComplainManager tempComplainManager;
     private HashMap hm;
     private HashMap temphm;
+    private String cdKey;
+    
     @FXML
     private Label labelCounterBrand;
 
@@ -88,18 +91,21 @@ public class FXMLComplainDetailReadController implements Initializable {
             ComplainDetail tempComplainDetail
                     = new ComplainDetail(
                             key,
-                            temphm.get("industry").toString().trim(),
-                            temphm.get("name").toString().trim(),
-                            temphm.get("sub").toString().trim(),
-                            temphm.get("time").toString().trim(),
-                            temphm.get("title").toString().trim(),
-                            temphm.get("content").toString().trim());
+                            temphm.get("industry").toString(),
+                            temphm.get("name").toString(),
+                            temphm.get("sub").toString(),
+                            temphm.get("time").toString(),
+                            temphm.get("title").toString(),
+                            temphm.get("content").toString());
             labelName.setText(tempComplainDetail.getName());
             labelIndustry.setText(tempComplainDetail.getIndustry());
             labelSub.setText(tempComplainDetail.getSub());
             labelTitle.setText(tempComplainDetail.getTitle());
             textAreaContent.setText(tempComplainDetail.getContent());
             // 조회한 정보 삭제 , 단순히 view 용이니.
+            
+            cdKey = tempComplainDetail.getId();
+            
             try {
                 complainManager.deleteIdXML("C:\\Users\\user\\Documents\\NetBeansProjects\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", key);
 
@@ -148,4 +154,27 @@ public class FXMLComplainDetailReadController implements Initializable {
         stage.show();
     }
 
-}
+    @FXML
+    private void btnEDITcompleted(ActionEvent event) {
+       
+        String a = textAreaFeedbackContent.getText();
+        Date d = new Date();
+        System.out.println("cdKey is : "+cdKey);
+       
+        complainManager = new XMLComplainManager();
+        data = FXCollections.observableArrayList();
+        hm = new HashMap();
+        
+            try {
+                complainManager.addFeedbackXML("C:\\Users\\user\\Documents\\NetBeansProjects\\CounterBrand\\src\\counterbrand\\", "complain.xml", cdKey,"수정완료");
+                // addFeedbackXML(경로/이름/id/a/d.toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    // 완료된 페이지.fxml  // open 
+
+        
+    }
+
+
