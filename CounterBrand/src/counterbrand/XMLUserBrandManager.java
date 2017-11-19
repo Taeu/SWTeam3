@@ -50,7 +50,7 @@ public class XMLUserBrandManager {
         HashMap xmlDataHashMap = new HashMap();
         HashMap dataMapper;
 
-        NodeList nList = doc.getElementsByTagName("userBrand");
+        NodeList nList = doc.getElementsByTagName("userbrand");
         if (nList == null) {
             System.out.println("Null");
             return null;
