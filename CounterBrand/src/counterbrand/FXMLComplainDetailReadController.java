@@ -166,11 +166,7 @@ public class FXMLComplainDetailReadController implements Initializable {
         hm = new HashMap();
         
             try {
-<<<<<<< HEAD
-                complainManager.addFeedbackXML("C:\\Users\\user\\Documents\\NetBeansProjects\\CounterBrand\\src\\counterbrand\\", "complain.xml", cdKey,"수정완료");
-=======
                 complainManager.addFeedbackXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", cdKey,"수정완료");
->>>>>>> CodeUpdate
                 // addFeedbackXML(경로/이름/id/a/d.toString());
             } catch (Exception e) {
                 e.printStackTrace();
@@ -182,9 +178,3 @@ public class FXMLComplainDetailReadController implements Initializable {
     }
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> CodeUpdate

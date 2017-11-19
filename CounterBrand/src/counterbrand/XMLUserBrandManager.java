@@ -50,7 +50,7 @@ public class XMLUserBrandManager {
         HashMap xmlDataHashMap = new HashMap();
         HashMap dataMapper;
 
-        NodeList nList = doc.getElementsByTagName("userBrand");
+        NodeList nList = doc.getElementsByTagName("userbrand");
         if (nList == null) {
             System.out.println("Null");
             return null;
@@ -58,12 +58,14 @@ public class XMLUserBrandManager {
         }
         //if("userBrand".equals(nList.item(0).getNodeName()))
         //{
+        System.out.println("이제 nList.getLength()");
         for (int i = 0; i < nList.getLength(); i++) {
+            System.out.println(i);
             dataMapper = new HashMap();
             Node nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                dataMapper.put("num", element.getElementsByTagName("num").item(0).getTextContent());
+                
                 dataMapper.put("id", element.getElementsByTagName("id").item(0).getTextContent());
                 dataMapper.put("password", element.getElementsByTagName("password").item(0).getTextContent());
                 dataMapper.put("name", element.getElementsByTagName("name").item(0).getTextContent());
