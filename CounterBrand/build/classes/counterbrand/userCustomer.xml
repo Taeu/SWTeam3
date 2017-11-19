@@ -3,6 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
+<<<<<<< HEAD
 <userCustomer num="1">
     <name>aa</name>
     <id>aa</id>
@@ -33,4 +34,8 @@ and open the template in the editor.
     <phone>wer</phone>
     <job>wer</job>
 </userCustomer>
-</root>
+<userCustomer num="4"><name>dsf</name><id>sdf</id><password>sdfdsf</password><gender>sdf</gender><birth>sf</birth><email>sdf</email><phone>dsf</phone><job>sdf</job></userCustomer></root>
+=======
+    
+<userCustomer num="1"><name>adas</name><id>집에가자</id><password>asd</password><gender>asdasd</gender><birth>dasd</birth><email>ㅁㄴㅇ</email><phone>ㅁㄴㅇ</phone><job>ㄴㅁㅇ</job></userCustomer></root>
+>>>>>>> CodeUpdate_Taeu

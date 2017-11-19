@@ -10,8 +10,8 @@ package counterbrand;
  * @author user
  */
 public class FilePath {
-    public String a = "C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand";
-
+    public String a = "C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\";
+        
     FilePath() {}
 
     public String getA() {
