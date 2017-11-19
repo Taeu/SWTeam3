@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLCustomerRegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLCustomerRegisterController">
    <children>
       <MenuBar layoutX="153.0" prefHeight="25.0" prefWidth="442.0">
          <menus>
@@ -47,7 +47,7 @@
       <TextField fx:id="textFieldId" layoutX="295.0" layoutY="143.0" />
       <TextField fx:id="passwordFieldPw" layoutX="295.0" layoutY="185.0" />
       <TextField fx:id="textFieldName" layoutX="295.0" layoutY="227.0" />
-      <TextField layoutX="295.0" layoutY="268.0" onAction="#textFieldYearOfBirth" />
+      <TextField fx:id="textFieldYearOfBirth" layoutX="295.0" layoutY="268.0" />
       <TextField fx:id="textFieldGender" layoutX="295.0" layoutY="310.0" />
       <TextField fx:id="textFieldPhoneNumber" layoutX="295.0" layoutY="356.0" />
       <TextField fx:id="textFieldEmailAdress" layoutX="295.0" layoutY="403.0" />

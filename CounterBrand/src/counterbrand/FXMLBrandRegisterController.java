@@ -15,7 +15,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -122,8 +124,8 @@ public class FXMLBrandRegisterController implements Initializable {
         HashMap brandSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-            brandSubmitList = brandManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
-            idhm = brandManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
+            brandSubmitList = brandManger.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
+            idhm = brandManger.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
@@ -162,7 +164,7 @@ public class FXMLBrandRegisterController implements Initializable {
         if (brandSubmitList == null || brandSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-                brandManger.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
+                brandManger.editXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml", hm);
                 
                 System.out.println("ok");
             } catch (Exception e) {
@@ -178,6 +180,21 @@ public class FXMLBrandRegisterController implements Initializable {
         Stage stageThis;
         stageThis = (Stage) btnBrandRegister.getScene().getWindow();
         stageThis.close();
+        showAlert();
+        
+    }
+    void showAlert() {
+        Alert.AlertType AlterType = null;
+        Alert alert = new Alert(AlterType.INFORMATION);
+        alert.setTitle("안내");
+        alert.setHeaderText("가입을 환영합니다.");
+        alert.setContentText("축하드립니다.");
+        alert.showAndWait().ifPresent(rs
+                -> {
+            if (rs == ButtonType.OK) {
+                alert.close();
+            }
+        });
     }
     
 }

@@ -19,16 +19,7 @@ public class UserCustomerDetail {
     private  String email;
     private  String phone;
     private  String job;
-    static private int count;
-
-    public String getJob() {
-        return job;
-    }
-
-    public void setJob(String job) {
-        this.job = job;
-    }
-
+    
     public UserCustomerDetail(String num, String id, String password, String name, String gender, String birth, String email, String phone, String job) {
         this.num = num;
         this.id = id;
@@ -40,18 +31,16 @@ public class UserCustomerDetail {
         this.phone = phone;
         this.job = job;
     }
-    
 
-    public UserCustomerDetail(String num, String id, String password, String name, String gender, String birth, String email, String phone) {
-        this.num = num;
-        this.id = id;
-        this.password = password;
-        this.name = name;
-        this.gender = gender;
-        this.birth = birth;
-        this.email = email;
-        this.phone = phone;
+    public String getJob() {
+        return job;
     }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
+
+    
 
     public String getNum() {
         return num;
@@ -116,15 +105,6 @@ public class UserCustomerDetail {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    public static int getCount() {
-        return count;
-    }
-
-    public static void setCount(int count) {
-        UserCustomerDetail.count = count;
-    }
-    
     
     
     
