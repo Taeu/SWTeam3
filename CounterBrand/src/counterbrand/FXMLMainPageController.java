@@ -69,7 +69,12 @@ public class FXMLMainPageController implements Initializable {
     }
 
     @FXML
-    private void menuRankViewCliked(ActionEvent event) {
+    private void menuRankViewCliked(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLRankingRead.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

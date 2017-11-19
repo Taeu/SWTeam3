@@ -74,7 +74,4 @@ public class RankDetail {
     public void setCount(String count) {
         this.count = count;
     }
-
-    
-    
 }

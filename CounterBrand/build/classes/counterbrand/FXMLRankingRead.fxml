@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLRankingReadController">
+   <children>
+      <MenuBar layoutX="162.0" layoutY="10.0" prefHeight="32.0" prefWidth="439.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="고객불만">
+               <items>
+                  <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" text="불만작성" />
+                  <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" text="불만조회" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="랭킹">
+               <items>
+                  <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="마이페이지">
+               <items>
+                  <MenuItem fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="labelCounterBrand" layoutX="24.0" layoutY="12.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TitledPane animated="false" layoutX="14.0" layoutY="56.0" prefHeight="538.0" prefWidth="265.0" text="전체랭킹">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="508.0" prefWidth="267.0">
+               <children>
+                  <ListView fx:id="totalRank" layoutX="41.0" layoutY="42.0" prefHeight="308.0" prefWidth="192.0" />
+                  <Label layoutX="12.0" layoutY="41.0" text="1." />
+                  <Label layoutX="13.0" layoutY="71.0" text="2." />
+                  <Label layoutX="12.0" layoutY="129.0" text="4." />
+                  <Label layoutX="12.0" layoutY="97.0" text="3." />
+                  <Label layoutX="13.0" layoutY="158.0" text="5." />
+                  <Label layoutX="14.0" layoutY="188.0" text="6." />
+                  <Label layoutX="13.0" layoutY="246.0" text="8." />
+                  <Label layoutX="13.0" layoutY="214.0" text="7." />
+                  <Label layoutX="14.0" layoutY="285.0" text="9." />
+                  <Label layoutX="15.0" layoutY="315.0" text="10." />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TabPane layoutX="286.0" layoutY="56.0" prefHeight="538.0" prefWidth="258.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="음식">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="foodRank" layoutX="58.0" layoutY="22.0" prefHeight="317.0" prefWidth="185.0" />
+                        <Label layoutX="33.0" layoutY="65.0" text="2." />
+                        <Label layoutX="32.0" layoutY="123.0" text="4." />
+                        <Label layoutX="32.0" layoutY="91.0" text="3." />
+                        <Label layoutX="33.0" layoutY="152.0" text="5." />
+                        <Label layoutX="34.0" layoutY="182.0" text="6." />
+                        <Label layoutX="33.0" layoutY="240.0" text="8." />
+                        <Label layoutX="33.0" layoutY="208.0" text="7." />
+                        <Label layoutX="34.0" layoutY="279.0" text="9." />
+                        <Label layoutX="35.0" layoutY="309.0" text="10." />
+                        <Label layoutX="33.0" layoutY="36.0" text="1." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="패션">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="passionRank" layoutX="58.0" layoutY="22.0" prefHeight="317.0" prefWidth="185.0" />
+                        <Label layoutX="33.0" layoutY="65.0" text="2." />
+                        <Label layoutX="32.0" layoutY="123.0" text="4." />
+                        <Label layoutX="32.0" layoutY="91.0" text="3." />
+                        <Label layoutX="33.0" layoutY="152.0" text="5." />
+                        <Label layoutX="34.0" layoutY="182.0" text="6." />
+                        <Label layoutX="33.0" layoutY="240.0" text="8." />
+                        <Label layoutX="33.0" layoutY="208.0" text="7." />
+                        <Label layoutX="34.0" layoutY="279.0" text="9." />
+                        <Label layoutX="35.0" layoutY="309.0" text="10." />
+                        <Label layoutX="33.0" layoutY="36.0" text="1." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="숙박">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="lodgementRank" layoutX="58.0" layoutY="22.0" prefHeight="317.0" prefWidth="185.0" />
+                        <Label layoutX="33.0" layoutY="65.0" text="2." />
+                        <Label layoutX="32.0" layoutY="123.0" text="4." />
+                        <Label layoutX="32.0" layoutY="91.0" text="3." />
+                        <Label layoutX="33.0" layoutY="152.0" text="5." />
+                        <Label layoutX="34.0" layoutY="182.0" text="6." />
+                        <Label layoutX="33.0" layoutY="240.0" text="8." />
+                        <Label layoutX="33.0" layoutY="208.0" text="7." />
+                        <Label layoutX="34.0" layoutY="279.0" text="9." />
+                        <Label layoutX="35.0" layoutY="309.0" text="10." />
+                        <Label layoutX="33.0" layoutY="36.0" text="1." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TabPane>
+   </children>
+</AnchorPane>

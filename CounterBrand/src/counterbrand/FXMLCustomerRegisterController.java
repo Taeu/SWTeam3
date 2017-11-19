@@ -122,8 +122,8 @@ public class FXMLCustomerRegisterController implements Initializable {
         HashMap customerSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-            customerSubmitList = customerManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml");
-            idhm = customerManger.readXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml");
+            customerSubmitList = customerManger.readXML("C:\\Users\\LENOVO\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml");
+            idhm = customerManger.readXML("C:\\Users\\LENOVO\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml");
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
@@ -167,7 +167,7 @@ public class FXMLCustomerRegisterController implements Initializable {
         if (customerSubmitList == null || customerSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
             try {
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-                customerManger.editXML("C:\\Users\\user\\Desktop\\cc\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml", hm);
+                customerManger.editXML("C:\\Users\\LENOVO\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userCustomer.xml", hm);
                 
                 System.out.println("ok");
             } catch (Exception e) {
