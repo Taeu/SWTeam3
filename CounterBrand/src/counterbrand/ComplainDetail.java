@@ -5,8 +5,6 @@
  */
 package counterbrand;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
 /**
  *
@@ -14,105 +12,78 @@ import javafx.beans.property.StringProperty;
  */
 public class ComplainDetail {
 
-    private final StringProperty id;
-    private final StringProperty name;
-    private final StringProperty industry;
-    private final StringProperty sub;
-    private final StringProperty time;
-    private final StringProperty content;
-    private final StringProperty title;
-
-    public ComplainDetail(String id, String industry, String name, String sub, String time, String title, String content) {
-        this.id = new SimpleStringProperty(id);
-        this.name = new SimpleStringProperty(name);
-        this.industry = new SimpleStringProperty(industry);
-        this.sub = new SimpleStringProperty(sub);
-        this.time = new SimpleStringProperty(time);
-        this.content = new SimpleStringProperty(content);
-        this.title = new SimpleStringProperty(title);
+    public ComplainDetail(String id, String name, String industry, String sub, String time, String content, String title) {
+        this.id = id;
+        this.name = name;
+        this.industry = industry;
+        this.sub = sub;
+        this.time = time;
+        this.content = content;
+        this.title = title;
     }
 
     public String getId() {
-        return id.get();
-    }
-
-    public String getName() {
-        return name.get();
-    }
-
-    public String getIndustry() {
-        return industry.get();
-    }
-
-    public String getSub() {
-        return sub.get();
-    }
-
-    public String getTime() {
-        return time.get();
-    }
-
-    public String getContent() {
-        return content.get();
-    }
-
-    public String getTitle() {
-        return title.get();
-    }
-
-    public void setId(String id) {
-        this.id.set(id);
-    }
-
-    public void setName(String name) {
-        this.name.set(name);
-    }
-
-    public void setIndustry(String industry) {
-        this.industry.set(industry);
-    }
-
-    public void setSub(String sub) {
-        this.sub.set(sub);
-    }
-
-    public void setTime(String time) {
-        this.time.set(time);
-    }
-
-    public void setContent(String content) {
-        this.content.set(content);
-    }
-
-    public void setTitle(String title) {
-        this.title.set(title);
-    }
-
-    public StringProperty idProperty() {
         return id;
     }
 
-    public StringProperty nameProperty() {
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public StringProperty industryProperty() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getIndustry() {
         return industry;
     }
 
-    public StringProperty subProperty() {
+    public void setIndustry(String industry) {
+        this.industry = industry;
+    }
+
+    public String getSub() {
         return sub;
     }
 
-    public StringProperty timeProperty() {
+    public void setSub(String sub) {
+        this.sub = sub;
+    }
+
+    public String getTime() {
         return time;
     }
 
-    public StringProperty contentProperty() {
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getContent() {
         return content;
     }
 
-    public StringProperty titleProperty() {
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getTitle() {
         return title;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    private String id;
+    private String name;
+    private  String industry;
+    private String sub;
+    private String time;
+    private String content;
+    private String title;
+
 }
