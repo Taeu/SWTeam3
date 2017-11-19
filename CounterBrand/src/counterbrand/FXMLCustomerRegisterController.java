@@ -44,6 +44,7 @@ public class FXMLCustomerRegisterController implements Initializable {
     private TextField textFieldId;
     @FXML
     private TextField textFieldName;
+    @FXML
     private TextField textFieldYearOfBirth;
     @FXML
     private TextField textFieldGender;
@@ -186,8 +187,5 @@ public class FXMLCustomerRegisterController implements Initializable {
         stageThis.close();
     }
 
-    @FXML
-    private void textFieldYearOfBirth(ActionEvent event) {
-    }
     
 }
