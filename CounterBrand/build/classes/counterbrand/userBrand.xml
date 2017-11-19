@@ -3,6 +3,33 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
+<<<<<<< HEAD
+    
+<userbrand num="1">
+    <id>asd</id>
+    <password>aasdas</password>
+    <name>asdas</name>
+    <industry>음식</industry>
+    <sales>100억~500억</sales>
+    <SNSAddress>asda</SNSAddress>
+    <Email>sada</Email>
+</userbrand>
+<userbrand num="1">
+    <id>fsd</id>
+    <password>sdfsd</password>
+    <name>sdfsdfsd</name>
+    <industry>음식</industry>
+    <sales>500억~2000억</sales>
+    <SNSAddress>sfdssdf</SNSAddress>
+    <Email>sdfsdfs</Email>
+</userbrand>
+<userbrand num="1"><id>sdfsdfsd</id><password>sfsdfsd</password><name>asdfsadf</name><industry>숙박</industry><sales>100억~500억</sales><SNSAddress>sdfsdf</SNSAddress><Email>sdfsd</Email></userbrand></root>
+=======
 
 
+<<<<<<< HEAD
 <userbrand num="1"><id>1</id><password>11</password><name>1</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>1</SNSAddress><Email>1</Email></userbrand><userbrand num="1"><id>2</id><password>2</password><name>2</name><industry>숙박</industry><sales>0~100억</sales><SNSAddress>2</SNSAddress><Email>2</Email></userbrand><userbrand num="2"><id>sfd</id><password>adsf</password><name>adsf</name><industry>패션</industry><sales>100억~500억</sales><SNSAddress>asdf</SNSAddress><Email>asdf</Email></userbrand></root>
+=======
+<userbrand num="1"><id>1</id><password>11</password><name>1</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>1</SNSAddress><Email>1</Email></userbrand><userbrand num="1"><id>2</id><password>2</password><name>2</name><industry>숙박</industry><sales>0~100억</sales><SNSAddress>2</SNSAddress><Email>2</Email></userbrand><userbrand num="2"><id>sfd</id><password>adsf</password><name>adsf</name><industry>패션</industry><sales>100억~500억</sales><SNSAddress>asdf</SNSAddress><Email>asdf</Email></userbrand></root>
+>>>>>>> e38ec58255670686d8d5a083a9b9974405974f57
+>>>>>>> 0f7d9c6884a2cc7d08cb4936fc0efd4286d479c8

@@ -93,4 +93,8 @@ and open the template in the editor.
     </feedbackDetail>
     
 </complain>
+<<<<<<< HEAD
+<complain id="11"><name>SPAO</name><industry>패션</industry><sub>환불/교환/AS</sub><time>Sun Nov 19 16:24:11 KST 2017</time><content>asdf</content><title>check</title><feedbackDetail> ~~~oh yeah~~~ <fdcontent> ~~~oh yeah~~~ </fdcontent></feedbackDetail></complain></root>
+=======
 </root>
+>>>>>>> e38ec58255670686d8d5a083a9b9974405974f57
