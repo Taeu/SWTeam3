@@ -174,8 +174,8 @@ public class FXMLComplainWriteController implements Initializable {
         HashMap complainSubmitList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
-            complainSubmitList = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
-            idhm = complainManager.readXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml");
+            complainSubmitList = complainManager.readXML(fp.a, "complain.xml");
+            idhm = complainManager.readXML(fp.a, "complain.xml");
             // ok no problem.
         } catch (Exception e) {
             e.printStackTrace();
@@ -200,8 +200,8 @@ public class FXMLComplainWriteController implements Initializable {
             try {
                 System.out.println("edit");
                 // 넣기 전에 각 값들이 널이 아닌지 체크하기!
-                complainManager.editXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complain.xml", hm);
-                complainManager.editXML("C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "complainDetail.xml", hm);
+                complainManager.editXML(fp.a, "complain.xml", hm);
+                complainManager.editXML(fp.a, "complainDetail.xml", hm);
                 
             } catch (Exception e) {
             }

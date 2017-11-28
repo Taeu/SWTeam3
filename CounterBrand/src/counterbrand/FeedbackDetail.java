@@ -13,6 +13,7 @@ public class FeedbackDetail {
     private  String content;
     private  String timeEnd;
     
+    FeedbackDetail(){};
     FeedbackDetail(String content, String timeEnd){
         this.content= new String(content);
         this.timeEnd= new String(timeEnd);

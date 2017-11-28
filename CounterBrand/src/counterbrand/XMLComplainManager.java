@@ -79,6 +79,12 @@ public class XMLComplainManager {
                 dataMapper.put("content", element.getElementsByTagName("content").item(0).getTextContent());
 
                 dataMapper.put("title", element.getElementsByTagName("title").item(0).getTextContent());
+                /*
+                dataMapper.put("feedbackContent", element.getElementsByTagName("feedbackContent").item(0).getTextContent());
+                dataMapper.put("feedbackTimeEnd", element.getElementsByTagName("feedbakcTimeEnd").item(0).getTextContent());
+                
+                
+                */
                 xmlDataHashMap.put(element.getAttribute("id"), dataMapper);
             }
             System.out.println("Dd'");

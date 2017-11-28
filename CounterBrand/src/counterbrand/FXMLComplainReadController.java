@@ -166,16 +166,24 @@ public class FXMLComplainReadController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        showTest();
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLComplainDetailRead.fxml"));
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+      
 
     }
-
+    void showTest() throws IOException{
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLComplainDetailFeedbackRead.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
+    }
     @FXML
     private void labelCounterBrandCliked(MouseEvent event) throws IOException {
         Stage stageThis;

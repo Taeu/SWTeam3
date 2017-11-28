@@ -40,4 +40,5 @@ public class CounterBrand extends Application {
         launch(args);
     }
     
+    
 }

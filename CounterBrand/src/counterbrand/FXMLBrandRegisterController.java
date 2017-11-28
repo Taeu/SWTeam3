@@ -127,7 +127,7 @@ public class FXMLBrandRegisterController implements Initializable {
         try {
             idhm = brandManger.readXML(fp.a, "userBrand.xml");
 
-            brandSubmitList = brandManger.readXML("C:\\Users\\JunHo\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\", "userBrand.xml");
+            brandSubmitList = brandManger.readXML(fp.a, "userBrand.xml");
            
             // ok no problem.
         } catch (Exception e) {

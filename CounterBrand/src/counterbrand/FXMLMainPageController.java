@@ -50,7 +50,7 @@ public class FXMLMainPageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
+    
     @FXML
     private void menuComplainWriteCliked(ActionEvent event) throws IOException {
         Stage stage = new Stage();

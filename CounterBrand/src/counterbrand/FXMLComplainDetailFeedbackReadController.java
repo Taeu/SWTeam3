@@ -110,12 +110,13 @@ public class FXMLComplainDetailFeedbackReadController implements Initializable {
             
             cdkey=tempComplainDetail.getId();
             // 조회한 정보 삭제 , 단순히 view 용이니.
+            /*
             try {
                 complainManager.deleteIdXML(fp.a, "complainDetail.xml", key);
 
             } catch (Exception e) {
                 e.printStackTrace();
-            }
+            }*/
         }
 
     }
