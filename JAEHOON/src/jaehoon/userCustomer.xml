@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--><root>
+
+<userCustomer num="1"><name>fsdsg</name><id>fas</id><password>fd</password><gender>gds</gender><birth>gds</birth><email>fdsf</email><phone>gds</phone><job>gsd</job></userCustomer><userCustomer num="2"><name>ncv</name><id>gds</id><password>nvc</password><gender>bv</gender><birth>vzx</birth><email>ndf</email><phone>ndf</phone><job>ndf</job></userCustomer></root>

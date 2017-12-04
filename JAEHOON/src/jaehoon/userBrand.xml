@@ -4,4 +4,13 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
 
+<userbrand num="1">
+    <id>cd</id>
+    <password>fds</password>
+    <name>lmlm</name>
+    <industry>음식</industry>
+    <sales>500억~2000억</sales>
+    <SNSAddress>fd</SNSAddress>
+    <Email>fssd</Email>
+</userbrand>
 </root>

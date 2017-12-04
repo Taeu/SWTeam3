@@ -4,34 +4,4 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
 
-<userCustomer num="1">
-    <name>aa</name>
-    <id>aa</id>
-    <password>aa</password>
-    <gender>aa</gender>
-    <birth>aa</birth>
-    <email>aa</email>
-    <phone>aa</phone>
-    <job>aa</job>
-</userCustomer>
-<userCustomer num="2">
-    <name>ss</name>
-    <id>ss</id>
-    <password>ss</password>
-    <gender>ss</gender>
-    <birth>ss</birth>
-    <email>ss</email>
-    <phone>sss</phone>
-    <job>ss</job>
-</userCustomer>
-<userCustomer num="3">
-    <name>wer</name>
-    <id>wer</id>
-    <password>wer</password>
-    <gender>wer</gender>
-    <birth>wer</birth>
-    <email>wer</email>
-    <phone>wer</phone>
-    <job>wer</job>
-</userCustomer>
-<userCustomer num="4"><name>dsf</name><id>sdf</id><password>sdfdsf</password><gender>sdf</gender><birth>sf</birth><email>sdf</email><phone>dsf</phone><job>sdf</job></userCustomer><userCustomer num="5"><name>11</name><id>1111</id><password>11</password><gender>111</gender><birth>1</birth><email>1</email><phone>11</phone><job>1</job></userCustomer><userCustomer num="6"><name>dsaflkjdsalkf</name><id>TestCustomer</id><password>dafkjdasfoek</password><gender>dlfkajsdlkfj;</gender><birth>dlkfajsdlkf;</birth><email>dlfkja;lsdk</email><phone>dlfkjaslkdf;j</phone><job>adlsfjk</job></userCustomer></root>
+</root>

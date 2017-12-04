@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package counterbrand;
+package jaehoon;
 
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,11 +18,11 @@ import javafx.stage.Stage;
  */
 // 메인 클래스
 
-public class CounterBrand extends Application {
+public class JAEHOON extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLBrandRegister.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLCustomerRegister.fxml"));
         
         Scene scene = new Scene(root);
         

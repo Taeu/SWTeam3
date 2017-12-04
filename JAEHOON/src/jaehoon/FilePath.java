@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package counterbrand;
+package jaehoon;
 
 /**
  *
  * @author user
  */
 public class FilePath {
-    public String a = "C:\\Users\\JAEHOON\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\";
+    public String a = "C:\\Users\\JAEHOON\\Documents\\GitHub\\SWTeam3\\JAEHOON\\src\\jaehoon\\";
         
     FilePath() {}
 
