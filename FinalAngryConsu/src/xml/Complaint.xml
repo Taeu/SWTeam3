@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--><root>
+<complaint num="1">
+    <id>a</id>
+    <title>옷이마음에안들어요</title>
+    <content>환불해주세요</content>
+    <time>Tue Dec 26 12:21:12 KST 2017</time>
+    <brandid>101</brandid>
+    <name>패션</name>
+    <industry>uniqlo</industry>
+    <sub>환불</sub>
+    <feedbackContent>0</feedbackContent>
+    <feedbackTimeend>0</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>1</status>
+</complaint>
+<complaint feedbackContent="i'm so sad" feedbackTimeend="Tue Dec 26 12:45:38 KST 2017" num="2">
+    <id>a</id>
+    <title>옷이입다가그만..</title>
+    <content>입다가그만찢어짐...</content>
+    <time>Tue Dec 26 12:22:57 KST 2017</time>
+    <brandid>101</brandid>
+    <name>패션</name>
+    <industry>uniqlo</industry>
+    <sub>교환</sub>
+    <feedbackContent>0</feedbackContent>
+    <feedbackTimeend>0</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>1</status>
+</complaint>
+<complaint num="3">
+    <id>a</id>
+    <title>수선부탁요</title>
+    <content>수선</content>
+    <time>Tue Dec 26 12:27:43 KST 2017</time>
+    <brandid>101</brandid>
+    <name>패션</name>
+    <industry>uniqlo</industry>
+    <sub>AS</sub>
+    <feedbackContent>0</feedbackContent>
+    <feedbackTimeend>0</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>1</status>
+</complaint>
+</root>

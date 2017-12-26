@@ -12,13 +12,13 @@ package entity;
 public class Rating {
     private int overallRating;
     private int speedRating;
-    private int specificityRating;
+    private int detailednessRating;
     private int processRating;
 
-    public Rating(int overallRating, int speedRating, int specificityRating, int processRating) {
+    public Rating(int overallRating, int speedRating, int detailednessRating, int processRating) {
         this.overallRating = overallRating;
         this.speedRating = speedRating;
-        this.specificityRating = specificityRating;
+        this.detailednessRating = detailednessRating;
         this.processRating = processRating;
     }
 
@@ -38,12 +38,12 @@ public class Rating {
         this.speedRating = speedRating;
     }
 
-    public int getSpecificityRating() {
-        return specificityRating;
+    public int getdetailednessRating() {
+        return detailednessRating;
     }
 
-    public void setSpecificityRating(int specificityRating) {
-        this.specificityRating = specificityRating;
+    public void setdetailednessRating(int detailednessRating) {
+        this.detailednessRating = detailednessRating;
     }
 
     public int getProcessRating() {

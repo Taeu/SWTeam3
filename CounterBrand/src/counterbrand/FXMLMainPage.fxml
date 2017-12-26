@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLMainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="counterbrand.FXMLMainPageController">
    <children>
       <Pane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;">
          <children>
@@ -43,7 +43,7 @@
                   </Button>
                </children>
             </Pane>
-            <Label fx:id="labelCounterBrand" onMouseClicked="#labelCounterBrandCliked" prefHeight="100.0" prefWidth="157.0" style="-fx-background-image: url('file:C:/Users/user/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/brandLogo1.png'); -fx-border-color: black;" textFill="#8a2668">
+            <Label fx:id="labelCounterBrand" onMouseClicked="#labelCounterBrandCliked" prefHeight="100.0" prefWidth="157.0" style="-fx-background-image: url('file:C:/Users/JAEHOON/Documents/GitHub/SWTeam3/CounterBrand/src/counterbrand/brandLogo1.png'); -fx-border-color: black;" textFill="#8a2668">
                <font>
                   <Font size="20.0" />
                </font>

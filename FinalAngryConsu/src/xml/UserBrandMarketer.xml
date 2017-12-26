@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+<userbrand num="101">
+    <id>uniqlo</id>
+    <password>101</password>
+    <email>uniqlo@uniqlo.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>10000억</sales>
+    <SNSAddress>uniqlo@uniqlo.kr</SNSAddress>
+    <brandId>101</brandId>
+    <name>uniqlo</name>
+    <industry>패션</industry>
+</userbrand> 
+<userbrand num="102">
+    <id>zara</id>
+    <password>102</password>
+    <email>zara@zara.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>4000억</sales>
+    <SNSAddress>zara@zara.kr</SNSAddress>
+    <brandId>102</brandId>
+    <name>zara</name>
+    <industry>패션</industry>
+</userbrand>    
+<userbrand num="103">
+    <id>h&m</id>
+    <password>103</password>
+    <email>h&m@h_m.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>3000억</sales>
+    <SNSAddress>h&m@h_m.kr</SNSAddress>
+    <brandId>103</brandId>
+    <name>h&m</name>
+    <industry>패션</industry>
+</userbrand>    
+<userbrand num="104">
+    <id>104</id>
+    <password>spao</password>
+    <email>spao@spao.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>3000억</sales>
+    <SNSAddress>spao@spao.kr</SNSAddress>
+    <brandId>104</brandId>
+    <name>spao</name>
+    <industry>숙박</industry>
+</userbrand>    
+
+<userbrand num="201">
+    <id>lotte</id>
+    <password>201</password>
+    <email>lotte@lotte.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>1600억</sales>
+    <SNSAddress>lotte@lotte.kr</SNSAddress>
+    <brandId>201</brandId>
+    <name>lotte</name>
+    <industry>숙박</industry>
+</userbrand>       
+<userbrand num="202">
+    <id>sinla</id>
+    <password>202</password>
+    <email>sinla@sinla.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>억</sales>
+    <SNSAddress>sinla@sinla.kr</SNSAddress>
+    <brandId>202</brandId>
+    <name>sinla</name>
+    <industry>숙박</industry>
+</userbrand>   
+<userbrand num="203">
+    <id>hilton</id>
+    <password>203</password>
+    <email>hilton@hilton.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>1600억</sales>
+    <SNSAddress>hilton@hilton.kr</SNSAddress>
+    <brandId>203</brandId>
+    <name>hilton</name>
+    <industry>숙박</industry>
+</userbrand>   
+<userbrand num="204">
+    <id>weston</id>
+    <password>204</password>
+    <email>weston@weston.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>1200억</sales>
+    <SNSAddress>weston@weston.kr</SNSAddress>
+    <brandId>204</brandId>
+    <name>weston</name>
+    <industry>숙박</industry>
+</userbrand>   
+
+
+<userbrand num="301">
+    <id>vips</id>
+    <password>301</password>
+    <email>vips@vips.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>5000억</sales>
+    <SNSAddress>vips@vips.kr</SNSAddress>
+    <brandId>301</brandId>
+    <name>vips</name>
+    <industry>음식</industry>
+</userbrand>   
+
+<userbrand num="302">
+    <id>ashley</id>
+    <password>302</password>
+    <email>ashley</email>
+    <numComplaint>30</numComplaint>
+    <sales>4000억</sales>
+    <SNSAddress>ashley@ashley.kr</SNSAddress>
+    <brandId>302</brandId>
+    <name>ashley</name>
+    <industry>음식</industry>
+</userbrand>   
+
+<userbrand num="303">
+    <id>outback</id>
+    <password>303</password>
+    <email>outback@outback.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>3000억</sales>
+    <SNSAddress>outback@outback.kr</SNSAddress>
+    <brandId>303</brandId>
+    <name>outback</name>
+    <industry>음식</industry>
+</userbrand>   
+
+<userbrand num="304">
+    <id>dmaris</id>
+    <password>304</password>
+    <email>dmaris@dmaris.kr</email>
+    <numComplaint>30</numComplaint>
+    <sales>2000억</sales>
+    <SNSAddress>dmaris@dmaris.kr</SNSAddress>
+    <brandId>304</brandId>
+    <name>dmaris</name>
+    <industry>음식</industry>
+</userbrand>   
+
+
+</root>

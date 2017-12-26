@@ -10,18 +10,22 @@ package entity;
  * @author user
  */
 public class UserBrandMarketer extends User {
-    private String industry;
     private String sales;
     private String SNSAddress;
     private Report report; 
     private Brand brand = new Brand();
-
-    public UserBrandMarketer(String industry, String sales, String SNSAddress, String id, String password, String email, String num, int numComplaint, String kkk ) {
+    
+    public UserBrandMarketer(){
+        super();
+    }
+    
+    
+    public UserBrandMarketer(String num, String id, String password, String email, int numComplaint, String sales, String SNSAddress, String kkk, String name,String industry ) {
         super(id, password, email, num, numComplaint);
-        this.industry = industry;
         this.sales = sales;
         this.SNSAddress = SNSAddress;
         brand.setIndustry(industry);
+        brand.setName(name);
         brand.setId(kkk); // 해당브랜드의 고유 id (ex UNIQLO 는 1번, SPAO는 4번)
         
         
@@ -38,14 +42,6 @@ public class UserBrandMarketer extends User {
         
     }
     
-        public String getIndustry() {
-        return industry;
-    }
-
-    public void setIndustry(String industry) {
-        this.industry = industry;
-    }
-
     public String getSales() {
         return sales;
     }
@@ -60,6 +56,12 @@ public class UserBrandMarketer extends User {
 
     public void setSNSAddress(String SNSAddress) {
         this.SNSAddress = SNSAddress;
+    }
+    public void setBrand(Brand brand){
+        this.brand = brand;
+    }
+    public Brand getBrand(){
+        return brand;
     }
     // id 변환함수 만들어야함
     

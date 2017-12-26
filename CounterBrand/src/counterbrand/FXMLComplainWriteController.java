@@ -195,11 +195,9 @@ public class FXMLComplainWriteController implements Initializable {
         hm.put("time", date.toString());
         hm.put("title", textFieldTitle.getText());
         hm.put("content", textAreaContent.getText());
-        
-        if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) { // 이 부분이 좀 이상한가?
+        // 이부분을 클래스로 바꿔주고.
+        if (complainSubmitList == null || complainSubmitList.get(Integer.toString(a)) == null) {
             try {
-                System.out.println("edit");
-                // 넣기 전에 각 값들이 널이 아닌지 체크하기!
                 complainManager.editXML(fp.a, "complain.xml", hm);
                 complainManager.editXML(fp.a, "complainDetail.xml", hm);
                 
@@ -208,6 +206,7 @@ public class FXMLComplainWriteController implements Initializable {
         } else if (complainSubmitList.get(Integer.toString(a)) != null) {
            
         }
+        
         complainDetailReadOpen();
         // close this scene.
         Stage stageThis;

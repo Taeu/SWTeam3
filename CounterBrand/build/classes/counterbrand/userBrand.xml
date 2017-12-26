@@ -4,22 +4,4 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
 
-<userbrand num="1">
-    <id>qq</id>
-    <password>qq</password>
-    <name>qq</name>
-    <industry>패션</industry>
-    <sales>0~100억</sales>
-    <SNSAddress>qq</SNSAddress>
-    <Email>qq</Email>
-</userbrand>
-<userbrand num="2">
-    <id>ww</id>
-    <password>ww</password>
-    <name>ww</name>
-    <industry>패션</industry>
-    <sales>100억~500억</sales>
-    <SNSAddress>ww</SNSAddress>
-    <Email>ww</Email>
-</userbrand>
-<userbrand num="3"><id>sdf</id><password>sdf</password><name>sdf</name><industry>음식</industry><sales>100억~500억</sales><SNSAddress>sdf</SNSAddress><Email>sdf</Email></userbrand><userbrand num="4"><id>dsaf</id><password>asdf</password><name>dasf</name><industry>패션</industry><sales>0~100억</sales><SNSAddress>sda</SNSAddress><Email>f</Email></userbrand><userbrand num="5"><id>testCorporate</id><password>abcd</password><name>Tester</name><industry>패션</industry><sales>2000억 이상</sales><SNSAddress>taeu</SNSAddress><Email>hi</Email></userbrand><userbrand num="6"><id>Tester2</id><password>22</password><name>hi</name><industry>패션</industry><sales>500억~2000억</sales><SNSAddress>hi</SNSAddress><Email>bye</Email></userbrand></root>
+<userbrand num="1"><id>gsd</id><password>gsd</password><name>gsd</name><industry>음식</industry><sales>500억~2000억</sales><SNSAddress>gsd</SNSAddress><Email>das</Email></userbrand><userbrand num="2"><id>fsdg</id><password>hdf</password><name>fas</name><industry>음식</industry><sales>100억~500억</sales><SNSAddress>hdf</SNSAddress><Email>gsd</Email></userbrand><userbrand num="3"><id>hdf</id><password>hdf</password><name>hdf</name><industry>음식</industry><sales>500억~2000억</sales><SNSAddress>dfds</SNSAddress><Email>fds</Email></userbrand><userbrand num="4"><id>hsd</id><password>hdf</password><name>gsd</name><industry>음식</industry><sales>500억~2000억</sales><SNSAddress>hfd</SNSAddress><Email>fas</Email></userbrand><userbrand num="5"><id>hdf</id><password>gsd</password><name>das</name><industry>음식</industry><sales>100억~500억</sales><SNSAddress>hdf</SNSAddress><Email>jfg</Email></userbrand></root>

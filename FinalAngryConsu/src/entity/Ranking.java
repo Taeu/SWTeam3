@@ -11,14 +11,12 @@ package entity;
  */
 public class Ranking {
     private Brand brand;
-    private String sub;
     private int BCI;
     private Rating rating;
     private int numComplaint;
 
-    public Ranking(Brand brand, String sub, int BCI, Rating rating, int numComplaint) {
+    public Ranking(Brand brand, int BCI, Rating rating, int numComplaint) {
         this.brand = brand;
-        this.sub = sub;
         this.BCI = BCI;
         this.rating = rating;
         this.numComplaint = numComplaint;
@@ -32,13 +30,7 @@ public class Ranking {
         this.brand = brand;
     }
 
-    public String getSub() {
-        return sub;
-    }
-
-    public void setSub(String sub) {
-        this.sub = sub;
-    }
+  
 
     public int getBCI() {
         return BCI;

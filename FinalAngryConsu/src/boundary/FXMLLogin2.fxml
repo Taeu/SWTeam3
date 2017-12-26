@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="boundary.FXMLLogin2Controller">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1300.0">
+         <children>
+            <Label fx:id="labelCounterBrand" layoutX="37.0" layoutY="38.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="258.0" layoutY="417.0" text="ID" />
+            <Label layoutX="256.0" layoutY="454.0" text="PW" />
+            <TextField fx:id="textFeildLoginID" layoutX="290.0" layoutY="413.0" prefHeight="23.0" prefWidth="175.0" />
+            <PasswordField fx:id="textFeildLoginPW" layoutX="290.0" layoutY="450.0" prefHeight="23.0" prefWidth="175.0" />
+            <Button fx:id="btnBrandRegister" layoutX="226.0" layoutY="521.0" mnemonicParsing="false" onAction="#btnBrandRegisterClicked" prefHeight="23.0" prefWidth="329.0" text="기업 회원가입" />
+            <Button fx:id="btnCustomerRegister" layoutX="226.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnCustomerRegisterClicked" prefHeight="23.0" prefWidth="329.0" text="일반 회원가입" />
+            <RadioButton fx:id="radioLoginType_a" layoutX="391.0" layoutY="383.0" mnemonicParsing="false" text="기업회원" />
+            <RadioButton fx:id="radioLoginType_b" layoutX="290.0" layoutY="383.0" mnemonicParsing="false" text="개인회원" />
+            <Button fx:id="btnLogin" layoutX="490.0" layoutY="399.0" mnemonicParsing="false" onAction="#btnLoginCliked" prefHeight="74.0" prefWidth="76.0" text="로그인" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

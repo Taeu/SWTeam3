@@ -10,13 +10,16 @@ package entity;
  * @author user
  */
 public class User {
-    
+       private String num;
+       
     private String id;
     private String password;
     private String email;
-    private String num;
+ 
     private int numComplaint;
-    
+    public User(){
+ 
+    }
     public User(String id, String password, String email, String num, int numComplaint) {
         this.id = id;
         this.password = password;

@@ -16,11 +16,14 @@ package others;
  */
 public class FilePath {
     public String a = "C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\CounterBrand\\src\\counterbrand\\";
-    public String b;
-    public String c;
-    public String d;
+    public String boundary = "C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\FinalAngryConsu\\src\\boundary\\";
+    public String xml = "C:\\Users\\user\\Documents\\GitHub\\SWTeam3\\FinalAngryConsu\\src\\xml\\";
     
-    FilePath() {}
+    public FilePath(){}
+    public FilePath(String a,String boundary, String xml){
+        
+    }
+
 
     public String getA() {
         return a;
