@@ -9,6 +9,7 @@ import control.XMLComplaintManager;
 import control.XMLCurrentClickedUserManager;
 import entity.Complaint;
 import entity.Feedback;
+import entity.Rating;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
@@ -30,6 +31,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -102,6 +104,48 @@ public class FXMLComplaintDetailReadController implements Initializable {
     private Label labelOverall;
     @FXML
     private ImageView brandLogo2;
+    @FXML
+    private RadioButton overall1;
+    @FXML
+    private RadioButton overall2;
+    @FXML
+    private RadioButton overall4;
+    @FXML
+    private RadioButton overall3;
+    @FXML
+    private RadioButton overall5;
+    @FXML
+    private RadioButton d1;
+    @FXML
+    private RadioButton d2;
+    @FXML
+    private RadioButton d4;
+    @FXML
+    private RadioButton d3;
+    @FXML
+    private RadioButton d5;
+    @FXML
+    private RadioButton sp1;
+    @FXML
+    private RadioButton sp2;
+    @FXML
+    private RadioButton sp4;
+    @FXML
+    private RadioButton sp3;
+    @FXML
+    private RadioButton sp5;
+    @FXML
+    private RadioButton p1;
+    @FXML
+    private RadioButton p2;
+    @FXML
+    private RadioButton p4;
+    @FXML
+    private RadioButton p3;
+    @FXML
+    private RadioButton p5;
+    @FXML
+    private Button btnRatingSubmit1;
 
     /**
      * Initializes the controller class.
@@ -167,6 +211,7 @@ public class FXMLComplaintDetailReadController implements Initializable {
             String usertype = "";
             if(A.equals("1")){ // customer
                 usertype="customer";
+                
             }
             else if(A.equals("2")){ // brand
                 usertype="brandmarketer";
@@ -246,6 +291,25 @@ public class FXMLComplaintDetailReadController implements Initializable {
                 alert.close();
             }
         });
+    }
+    int nullCheck2(String over, String speed, String detail, String process) {
+
+        
+        if (over.equals("")) {
+            showAlert("종합평가");
+            return 1;
+        } else if (speed.equals("")) {
+            showAlert("스피드");
+            return 1;
+        } else if (detail.equals("")) {
+            showAlert("구체성");
+            return 1;
+        } else if (process.equals("")) {
+            showAlert("공정성");
+            return 1;
+        } 
+        return 0;
+
     }
 int nullCheck(String id, String ind, String name, String sub, String time, String title, String content) {
 
@@ -344,6 +408,48 @@ int nullCheck(String id, String ind, String name, String sub, String time, Strin
 
     @FXML
     private void a111Clicked(MouseEvent event) {
+    }
+
+    @FXML
+    private void btnRatingSubmitCliked(ActionEvent event) {
+        int r = nullCheck2(
+                "1",
+                "1",
+                "1",
+                "1"
+                );
+        if (r == 1) {
+            return;
+        }
+        // read
+        complaintManager = new XMLComplaintManager();
+        hm = new HashMap();
+        idhm = new HashMap();
+        HashMap complaintSubmitList = new HashMap();
+        data = FXCollections.observableArrayList();
+        try {
+            complaintSubmitList = complaintManager.readXML(fp.xml, "complaint.xml");
+            idhm = complaintManager.readXML(fp.xml, "complaint.xml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // read end
+        
+        // addRating
+        
+        Rating rating = new Rating(4,4,4,4);
+        int num = 2;
+        if (complaintSubmitList == null || complaintSubmitList.get(Integer.toString(num)) != null) {
+            try {
+                System.out.println("try to add");
+                complaintManager.addRatingXML(fp.xml, "complaint.xml", nnnnn,rating); // 여기 hm 대신 complaint 가 들어가면 됨.
+            } catch (Exception e) {
+            }
+        } else if (complaintSubmitList.get(Integer.toString(num)) == null) {
+           System.out.println("there is no such information to add");
+        }
+        
+        //
     }
     
 }

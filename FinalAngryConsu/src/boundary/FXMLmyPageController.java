@@ -7,7 +7,10 @@ package boundary;
 
 import control.XMLComplaintManager;
 import control.XMLCurrentClickedUserManager;
+import entity.Brand;
 import entity.Complaint;
+import entity.Feedback;
+import entity.Rating;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -30,6 +33,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -39,6 +43,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
 import others.FilePath;
+import others.complaintDetail;
 
 /**
  * FXML Controller class
@@ -46,16 +51,37 @@ import others.FilePath;
  * @author user
  */
 public class FXMLmyPageController implements Initializable {
-    private ObservableList<Complaint> data;
+      @FXML
+    private TableView<complaintDetail> tableViewComplaint;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnName;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnSub;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnTitle;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnId;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnIndustry;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnContent;
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnTime;
+      private String thisUser;
+      private ObservableList<complaintDetail> data;
     private XMLComplaintManager complaintManager;
     private HashMap hm;
     private HashMap temphm;
     private HashMap idhm;
     private HashMap tempidhm;
     FilePath fp = new FilePath();
-    private XMLCurrentClickedUserManager currentUser;
-   
-    public String A;
+     private XMLCurrentClickedUserManager currentUser;
+    String industry="";
+    String name ="";
+    String B="";
+    String A="";
+    @FXML
+    private TableColumn<complaintDetail, String> tableColumnStatus;
     @FXML
     private Label UserType;
     @FXML
@@ -78,24 +104,7 @@ public class FXMLmyPageController implements Initializable {
     private Pane brandImg;
     @FXML
     private Label brandLogo;
-    @FXML
-    private TableView<?> tableViewComplaint;
-    @FXML
-    private TableColumn<?, ?> tableColumnName;
-    @FXML
-    private TableColumn<?, ?> tableColumnId;
-    @FXML
-    private TableColumn<?, ?> tableColumnIndustry;
-    @FXML
-    private TableColumn<?, ?> tableColumnContent;
-    @FXML
-    private TableColumn<?, ?> tableColumnSub;
-    @FXML
-    private TableColumn<?, ?> tableColumnTitle;
-    @FXML
-    private TableColumn<?, ?> tableColumnTime;
-    @FXML
-    private TableColumn<?, ?> tableColumnStatus;
+    
     @FXML
     private TextField texFieldUser;
 
@@ -105,8 +114,10 @@ public class FXMLmyPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // 아래 부분 부터가 페이지 브랜드인지 아닌지 체크해줌.
+       initComplaintReadTableView();
+        // 아래 부분 부터가 페이지 브랜드인지 아닌지 체크해줌.
         int num=0;         // num count 해주어야함.
-        XMLCurrentClickedUserManager currentUser = new XMLCurrentClickedUserManager();
+        currentUser = new XMLCurrentClickedUserManager();
         HashMap hm = new HashMap();
         HashMap idhm = new HashMap();
         HashMap currentUserList = new HashMap();
@@ -132,22 +143,10 @@ public class FXMLmyPageController implements Initializable {
         //
         if ( num ==1 ) {
             
-                System.out.println("0");
-        hm.put("num", Integer.toString(num));
-        hm.put("name","no");
-        hm.put("id", "no");
-        hm.put("status", "0");
-        // 이부분을 클래스로 바꿔주고.
-        if (currentUserList == null || currentUserList.get(Integer.toString(num)) == null) {
-            try {
-                currentUser.createXML(fp.xml, "CurrentUser.xml", hm);
-            } catch (Exception e) {
-            }
-        } else if (currentUserList.get(Integer.toString(num)) != null) {  
-        }
         }
         else {
-            String A="";
+            
+             A="";
             System.out.println("gggg");
             try {
                 A = currentUser.searchXML(fp.xml,"CurrentUser.xml");
@@ -162,18 +161,148 @@ public class FXMLmyPageController implements Initializable {
             }
             if(A.equals("1")){ // customer
                 System.out.println("1");
-                
-                
+                 B="";
+                 texFieldUser.setText("customer");
+                System.out.println("gggg");
+                btnCustomerRegister1.setVisible(false);
+            try {
+                B = currentUser.searchNameXML(fp.xml,"CurrentUser.xml");
+            } catch (IOException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (TransformerException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
             }
             else if(A.equals("2")){ // brand
                 System.out.println("2");
-                
+                texFieldUser.setText("brandmarketer");
+                B="";
+                System.out.println("gggg");
+                btnCustomerRegister1.setVisible(true);
+            try {
+                B = currentUser.searchNameXML(fp.xml,"CurrentUser.xml");
+            } catch (IOException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (TransformerException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
+                // init again,
+                complaintManager = new XMLComplaintManager();
+        data = FXCollections.observableArrayList();
+        hm = new HashMap();
+
+        try {
+            hm = complaintManager.readXML(fp.xml, "Complaint.xml");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        iterator = hm.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            temphm = (HashMap) hm.get(key);
+            if((A.equals("1")&&temphm.get("id").toString().trim().equals(B))||(A.equals("2")&temphm.get("name").toString().trim().equals(B))){
+            data.add(new complaintDetail(
+                    key, 
+                    temphm.get("id").toString().trim(), 
+                    temphm.get("title").toString().trim(), 
+                    temphm.get("content").toString().trim(), 
+                    temphm.get("time").toString().trim(),
+                    temphm.get("brandid").toString().trim(),
+                    temphm.get("name").toString().trim(),
+                    temphm.get("industry").toString().trim(),
+                   temphm.get("sub").toString().trim(),
+                    temphm.get("feedbackContent").toString().trim(), 
+                    temphm.get("feedbackTimeend").toString().trim(),
+                    
+                   temphm.get("overallRating").toString().trim(),temphm.get("speedRating").toString().trim(),
+                   temphm.get("detailednessRating").toString().trim(),temphm.get("processRating").toString().trim(),
+                   
+                   
+                    
+                    temphm.get("status").toString().trim()
+            ));
+            }
+        }
+        textFieldID.setText(B);
+        textFieldName1.setText(B);
+        
+        tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tableColumnIndustry.setCellValueFactory(new PropertyValueFactory<>("industry"));
+        tableColumnSub.setCellValueFactory(new PropertyValueFactory<>("sub"));
+        tableColumnTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
+        tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tableColumnContent.setCellValueFactory(new PropertyValueFactory<>("content"));
+        tableColumnTime.setCellValueFactory(new PropertyValueFactory<>("time"));
+        
+        tableColumnStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        tableViewComplaint.setItems(null);
+        tableViewComplaint.setItems(data);
             }
         }
         
         // TODO
-    }    
+        
+public void initComplaintReadTableView() {
+        complaintManager = new XMLComplaintManager();
+        data = FXCollections.observableArrayList();
+        hm = new HashMap();
 
+        try {
+            hm = complaintManager.readXML(fp.xml, "Complaint.xml");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Iterator<String> iterator = hm.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            temphm = (HashMap) hm.get(key);
+            data.add(new complaintDetail(
+                    key, 
+                    temphm.get("id").toString().trim(), 
+                    temphm.get("title").toString().trim(), 
+                    temphm.get("content").toString().trim(), 
+                    temphm.get("time").toString().trim(),
+                    temphm.get("brandid").toString().trim(),
+                    temphm.get("name").toString().trim(),
+                    temphm.get("industry").toString().trim(),
+                   temphm.get("sub").toString().trim(),
+                    temphm.get("feedbackContent").toString().trim(), 
+                    temphm.get("feedbackTimeend").toString().trim(),
+                    
+                   temphm.get("overallRating").toString().trim(),temphm.get("speedRating").toString().trim(),
+                   temphm.get("detailednessRating").toString().trim(),temphm.get("processRating").toString().trim(),
+                   
+                   
+                    
+                    temphm.get("status").toString().trim()
+            ));
+        }
+        tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tableColumnIndustry.setCellValueFactory(new PropertyValueFactory<>("industry"));
+        tableColumnSub.setCellValueFactory(new PropertyValueFactory<>("sub"));
+        tableColumnTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
+        tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tableColumnContent.setCellValueFactory(new PropertyValueFactory<>("content"));
+        tableColumnTime.setCellValueFactory(new PropertyValueFactory<>("time"));
+        
+        tableColumnStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        tableViewComplaint.setItems(null);
+        tableViewComplaint.setItems(data);
+
+    }
     @FXML
     private void btnCustomerRegisterClicked(ActionEvent event) {
     }
@@ -216,7 +345,47 @@ public class FXMLmyPageController implements Initializable {
     }
 
     @FXML
-    private void ComplainReadDetailCliked(MouseEvent event) {
+    private void ComplainReadDetailCliked(MouseEvent event) throws IOException {
+        complaintManager = new XMLComplaintManager();
+        data = FXCollections.observableArrayList();
+        hm = new HashMap();
+        HashMap complainDetailList = new HashMap();
+        try {
+            complainDetailList = complaintManager.readXML(fp.xml, "ComplaintDetail.xml");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        complaintDetail c = tableViewComplaint.getSelectionModel().getSelectedItem();
+        Complaint cc = new Complaint(
+                c.getNum(),
+                c.getId(),
+                c.getTitle(),
+                c.getContent(),
+                c.getTime(),
+                new Feedback(c.getFeedbackContent(),c.getFeedbackTimeend()),
+                new Rating(Integer.parseInt(c.getOverallRating()),Integer.parseInt(c.getSpeedRating())
+                        ,Integer.parseInt(c.getDetailednessRating()),Integer.parseInt(c.getProcessRating())),
+                new Brand(),
+                c.getSub(),
+                c.getStatus()
+        );
+
+        System.out.println("선택한 정보 :" + hm);
+        try {
+            complaintManager.editXML(fp.xml, "ComplaintDetail.xml", cc);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //showTest();
+        Stage stage = new Stage();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("FXMLComplaintDetailRead.fxml"));
+        
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     
 }

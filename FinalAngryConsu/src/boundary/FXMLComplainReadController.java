@@ -62,18 +62,8 @@ public class FXMLComplainReadController implements Initializable {
     private TableColumn<complaintDetail, String> tableColumnContent;
     @FXML
     private TableColumn<complaintDetail, String> tableColumnTime;
-    @FXML
-    private Label brandLogo;
-    @FXML
-    private MenuItem menuComplainWrite;
-    @FXML
-    private MenuItem menuComplainRead;
-    @FXML
-    private MenuItem menuRankView;
-    private String thisUser;
-    @FXML
-    private MenuItem menuMypage;
-    private ObservableList<complaintDetail> data;
+      private String thisUser;
+      private ObservableList<complaintDetail> data;
     private XMLComplaintManager complaintManager;
     private HashMap hm;
     private HashMap temphm;
@@ -85,6 +75,17 @@ public class FXMLComplainReadController implements Initializable {
     String name ="";
     @FXML
     private TableColumn<complaintDetail, String> tableColumnStatus;
+    @FXML
+    private Label brandLogo;
+    @FXML
+    private MenuItem menuComplainWrite;
+    @FXML
+    private MenuItem menuComplainRead;
+    @FXML
+    private MenuItem menuRankView;
+    @FXML
+    private MenuItem menuMypage;
+    
     /**
      * Initializes the controller class.
      */

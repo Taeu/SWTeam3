@@ -158,8 +158,8 @@ public class FXMLLoginController implements Initializable {
         else {
             if(radioLoginType_a.isSelected()){
                  hm.put("num", Integer.toString(num));
-                 hm.put("name","customer");
-                 hm.put("id", "a");
+                 hm.put("name","b");
+                 hm.put("id", "b");
                  hm.put("status", "1");
                  try {
                  currentUser.createXML(fp.xml, "CurrentUser.xml", hm);
