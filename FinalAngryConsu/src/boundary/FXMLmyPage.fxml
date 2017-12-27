@@ -94,8 +94,8 @@
                   <TableColumn fx:id="tableColumnId" prefWidth="21.0" text="id" visible="false" />
                   <TableColumn fx:id="tableColumnIndustry" prefWidth="100.0" text="industry" />
                   <TableColumn fx:id="tableColumnContent" prefWidth="21.0" text="content" visible="false" />
-                  <TableColumn fx:id="tableColumnSub" prefWidth="75.0" text="Details" />
-                  <TableColumn fx:id="tableColumnTitle" prefWidth="700.0" text="Title" />
+                  <TableColumn fx:id="tableColumnSub" prefWidth="70.0" text="Details" />
+                  <TableColumn fx:id="tableColumnTitle" prefWidth="200.0" text="Title" />
                   <TableColumn fx:id="tableColumnTime" prefWidth="100.0" text="time" />
                   <TableColumn fx:id="tableColumnStatus" prefWidth="75.0" text="status" />
                </columns>

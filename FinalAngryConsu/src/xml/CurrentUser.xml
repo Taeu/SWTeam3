@@ -3,4 +3,4 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 --><root>
-    <clikeduser num="1"><name>no</name><status>0</status><id>no</id></clikeduser></root>
+    <clikeduser num="1"><name>no</name><status>0</status><id>no</id></clikeduser><clikeduser num="2"><name>b</name><status>1</status><id>b</id></clikeduser><clikeduser num="3"><name>no</name><status>0</status><id>no</id></clikeduser><clikeduser num="4"><name>vips</name><status>2</status><id>vips</id></clikeduser></root>

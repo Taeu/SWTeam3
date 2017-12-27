@@ -632,4 +632,4 @@ and open the template in the editor.
     <processRating>0</processRating>
     <status>2</status>
 </complaint>
-</root>
+<complaint num="38"><id>b</id><title>숙박시설이</title><content>oups</content><time>Wed Dec 27 19:05:17 KST 2017</time><brandid>304</brandid><name>westin</name><industry>패션</industry><sub>westin</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint><complaint num="39"><id>b</id><title>가고싶다</title><content>ㅇㅇㅇㅇ</content><time>Wed Dec 27 19:17:15 KST 2017</time><brandid>301</brandid><name>vips</name><industry>음식</industry><sub>집</sub><feedbackContent>1322144</feedbackContent><feedbackTimeend>Wed Dec 27 19:18:18 KST 2017</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>2</status></complaint></root>
