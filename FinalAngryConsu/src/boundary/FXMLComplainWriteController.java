@@ -181,7 +181,7 @@ public class FXMLComplainWriteController implements Initializable {
         }else if(name.equals("outback")){
             b= new Brand("303",name,"음식");
         }else {
-            b= new Brand("304",name,"음식");
+            b= new Brand("304",name,"패션");
         }
         return b;
     } 

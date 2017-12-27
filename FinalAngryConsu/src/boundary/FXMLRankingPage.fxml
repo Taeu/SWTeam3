@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLRankingPageController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLRankingPageController">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1200.0" prefWidth="1300.0" style="-fx-background-color: white;">
          <children>
@@ -25,22 +25,22 @@
             </Label>
             <Pane layoutY="165.0" prefHeight="79.0" prefWidth="1300.0" style="-fx-background-color: black;">
                <children>
-                  <Button layoutX="112.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Total">
+                  <Button fx:id="btnTotal" layoutX="112.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnTotalClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Total">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button layoutX="398.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Food">
+                  <Button fx:id="btnFood" layoutX="398.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnFoodClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Food">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button layoutX="956.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Fashion">
+                  <Button fx:id="btnf" layoutX="956.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnfClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Fashion">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button layoutX="675.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Accommodation">
+                  <Button fx:id="btnAcc" layoutX="675.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnAccClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Accommodation">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -57,6 +57,45 @@
                   <Image url="@../images/KakaoTalk_20171226_233017063.png" />
                </image>
             </ImageView>
+            <Pane fx:id="menu_image1" layoutX="175.0" layoutY="450.0" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutY="260.0" prefHeight="91.0" prefWidth="300.0" text="  1st">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="firstBrand" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" style="-fx-background-color: white;" />
+               </children>
+            </Pane>
+            <AnchorPane layoutX="150.0" layoutY="300.0" prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: gray;">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="212.0" layoutY="1.0" prefHeight="91.0" prefWidth="606.0" text="Hot Company 2017" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="66.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Pane fx:id="menu_image3" layoutX="517.0" layoutY="445.0" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutY="260.0" prefHeight="91.0" prefWidth="300.0" text="  2nd">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="second" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="menu_image31" layoutX="848.0" layoutY="444.0" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutY="260.0" prefHeight="91.0" prefWidth="300.0" text="  3rd">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="third" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" />
+               </children>
+            </Pane>
          </children></AnchorPane>
   </content>
 </ScrollPane>
