@@ -5,7 +5,10 @@
  */
 package boundary;
 
+import control.XMLCurrentClickedUserManager;
+import java.util.HashMap;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -20,9 +23,16 @@ import others.FilePath;
  * @author user
  */
 public class FinalAngryConsu extends Application {
-    
+    private ObservableList<HashMap> data;
+    private XMLCurrentClickedUserManager currentUser = new XMLCurrentClickedUserManager();
+    private HashMap hm;
+    private HashMap temphm;
+    private HashMap idhm;
+    private HashMap tempidhm;    FilePath fp = new FilePath();
     @Override
     public void start(Stage stage) throws Exception {
+        currentUser.deleteAllXML(fp.xml,"CurrentUser.xml");
+        
         Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));
         
         Scene scene = new Scene(root);

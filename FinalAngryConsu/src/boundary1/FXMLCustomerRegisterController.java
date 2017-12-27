@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package boundary;
+package boundary1;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,9 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -22,26 +20,28 @@ import javafx.scene.input.MouseEvent;
  *
  * @author user
  */
-public class FXMLBrandRegisterController implements Initializable {
+public class FXMLCustomerRegisterController implements Initializable {
 
     @FXML
     private Label labelCounterBrand;
     @FXML
-    private TextField textFieldID;
+    private TextField textFieldId;
+    @FXML
+    private TextField passwordFieldPw;
     @FXML
     private TextField textFieldName;
     @FXML
-    private TextField textFieldSNSAddress;
+    private TextField textFieldYearOfBirth;
     @FXML
-    private TextField textFieldEmail;
+    private TextField textFieldGender;
     @FXML
-    private Button btnBrandRegister;
+    private TextField textFieldPhoneNumber;
     @FXML
-    private PasswordField passwordFieldPW;
+    private TextField textFieldEmailAdress;
     @FXML
-    private ChoiceBox<?> choiceBoxIndustry;
+    private Button btnCustomerRegister;
     @FXML
-    private ChoiceBox<?> choiceBoxSales;
+    private TextField textFieldJob;
 
     /**
      * Initializes the controller class.
@@ -56,7 +56,7 @@ public class FXMLBrandRegisterController implements Initializable {
     }
 
     @FXML
-    private void btnSignInSubmitCliked(ActionEvent event) {
+    private void btnCustomerRegisterClicked(ActionEvent event) {
     }
     
 }

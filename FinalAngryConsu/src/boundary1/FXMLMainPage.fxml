@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLMainPageController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1300.0">
+         <children>
+            <MenuBar prefHeight="52.0" prefWidth="1300.0" style="-fx-background-color: black; -fx-border-color: ;">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 20; -fx-font -color: white;" text="Angry Consumer" />
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 20; -fx-font-color: white;" text="고객불만">
+                     <items>
+                        <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" text="불만작성" />
+                        <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" text="불만조회" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="랭킹">
+                     <items>
+                        <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="마이페이지">
+                     <items>
+                        <MenuItem fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Button fx:id="btnLogin" layoutX="1208.0" layoutY="78.0" mnemonicParsing="false" onAction="#btnLoginClicked" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: bisque; -fx-border-color: darkgrey;" text="Login" />
+            <Button fx:id="btnComplainWrite" layoutX="1125.0" layoutY="116.0" mnemonicParsing="false" onAction="#btnComplainWriteCliked" prefHeight="71.0" prefWidth="124.0" style="-fx-background-color: black; -fx-border-color: darkgrey;" text="Q. 불만작성" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="21.86">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Button>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

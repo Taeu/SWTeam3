@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLRankingPageController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1200.0" prefWidth="1300.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="labelCounterBrand1" alignment="CENTER" layoutY="60.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="58.0" prefWidth="1300.0" style="-fx-background-color: gray; -fx-font-size: 40; -fx-font-family: bold; -fx-font-color: black;" text="Brands Ranking" textFill="#0a0000">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCounterBrand2" alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="47.0" prefWidth="1300.0" style="-fx-background-color: gray; -fx-font-size: 30; -fx-font-family: bold;" text="December 27, 2017" textFill="#1b0000">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutY="165.0" prefHeight="79.0" prefWidth="1300.0" style="-fx-background-color: black;">
+               <children>
+                  <Button layoutX="112.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Total">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="398.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Food">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="956.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Fashion">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="675.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Accommodation">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label layoutY="-6.0" prefHeight="71.0" prefWidth="1300.0" style="-fx-background-color: black;" text="      Angry Customer" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../images/KakaoTalk_20171226_233017063.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

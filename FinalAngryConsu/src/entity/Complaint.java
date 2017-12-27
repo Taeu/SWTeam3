@@ -21,6 +21,19 @@ public class Complaint {
     private String sub;
     private String status;      // 1 feedback 2 rating 3
 
+    public Complaint(String num, String id, String title, String content, String time, Feedback feedback, Rating rating, Brand brand, String sub, String status) {
+        this.num = num;
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.time = time;
+        this.feedback = feedback;
+        this.rating = rating;
+        this.brand = brand;
+        this.sub = sub;
+        this.status = status;
+    }
+
     public String getStatus() {
         return status;
     }

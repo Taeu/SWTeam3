@@ -11,9 +11,8 @@ package others;
  */
 public class CurrentClikedUser {
     public String id;
-    public String status;
     public String name;
-    
+    public String status;
     
     
     public CurrentClikedUser(){

@@ -1,28 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLLoginController">
-   <children>
-      <Label fx:id="labelCounterBrand" layoutX="16.0" layoutY="12.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="164.0" layoutY="198.0" text="ID" />
-      <Label layoutX="164.0" layoutY="249.0" text="PW" />
-      <TextField fx:id="textFeildLoginID" layoutX="216.0" layoutY="194.0" prefHeight="23.0" prefWidth="175.0" />
-      <PasswordField fx:id="textFeildLoginPW" layoutX="216.0" layoutY="245.0" prefHeight="23.0" prefWidth="175.0" />
-      <Button fx:id="btnBrandRegister" layoutX="163.0" layoutY="298.0" mnemonicParsing="false" onAction="#btnBrandRegisterClicked" prefHeight="23.0" prefWidth="329.0" text="기업 회원가입" />
-      <Button fx:id="btnCustomerRegister" layoutX="163.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnCustomerRegisterClicked" prefHeight="23.0" prefWidth="329.0" text="일반 회원가입" />
-      <RadioButton fx:id="radioLoginType_a" layoutX="197.0" layoutY="155.0" mnemonicParsing="false" text="기업회원" />
-      <RadioButton fx:id="radioLoginType_b" layoutX="312.0" layoutY="155.0" mnemonicParsing="false" text="개인회원" />
-      <Button fx:id="btnLogin" layoutX="416.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnLoginCliked" prefHeight="74.0" prefWidth="76.0" text="로그인" />
-   </children>
-</AnchorPane>
+<ScrollPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLLoginController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <ImageView fitHeight="643.0" fitWidth="1302.0" layoutX="-2.0" layoutY="59.0" opacity="0.46">
+               <image>
+                  <Image url="@../images/company5.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="507.0" layoutY="231.0" prefHeight="35.0" prefWidth="91.0" text="ID">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="503.0" layoutY="277.0" prefHeight="34.0" prefWidth="99.0" text="PW">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFeildLoginID" layoutX="588.0" layoutY="230.0" prefHeight="37.0" prefWidth="263.0" />
+            <PasswordField fx:id="textFeildLoginPW" layoutX="588.0" layoutY="277.0" prefHeight="35.0" prefWidth="263.0" />
+            <Button fx:id="btnBrandRegister" layoutX="501.0" layoutY="421.0" maxHeight="36.0" maxWidth="350.0" minHeight="26.0" minWidth="350.0" mnemonicParsing="false" onAction="#btnBrandRegisterClicked" prefHeight="36.0" prefWidth="350.0" text="Company register">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnCustomerRegister" layoutX="501.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnCustomerRegisterClicked" prefHeight="26.0" prefWidth="350.0" text="Customer register">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <RadioButton fx:id="radioLoginType_b" contentDisplay="CENTER" layoutX="676.0" layoutY="190.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="237.0" style="-fx-font-size: 20;" text="company user" textFill="#030000" />
+            <RadioButton fx:id="radioLoginType_a" layoutX="496.0" layoutY="193.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="185.0" style="-fx-font-size: 20;" text="customer user" />
+            <Button fx:id="btnLogin" layoutX="589.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnLoginClicked" prefHeight="39.0" prefWidth="261.0" text="Log-in">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label layoutX="-2.0" prefHeight="71.0" prefWidth="1302.0" style="-fx-background-color: black;" text="       Angry Customer" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="80.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/KakaoTalk_20171226_233017063.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutX="442.0" layoutY="7.0" prefHeight="63.0" prefWidth="783.0" style="-fx-background-color: black;">
+               <menus>
+                  <Menu style="-fx-font-size: 30; -fx-background-color: black; -fx-font-color: white;" text="고객불만  ">
+                     <items>
+                        <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" style="-fx-font-size: 30;" text="불만작성" />
+                        <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" text="불만조회" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30; -fx-background-color: black;" text="랭킹  ">
+                     <items>
+                        <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30;" text="마이페이지">
+                     <items>
+                        <MenuItem id="MenuItemMypage" fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+                     </items>
+                  </Menu>
+               </menus>
+               <cursor>
+                  <Cursor fx:constant="S_RESIZE" />
+               </cursor>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

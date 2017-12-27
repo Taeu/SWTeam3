@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLComplainReadController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="1400.0">
+         <children>
+            <TableView fx:id="tableViewComplaint" layoutX="50.0" layoutY="200.0" onMouseClicked="#ComplainReadDetailCliked" prefHeight="600.0" prefWidth="1200.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Brand" />
+                  <TableColumn fx:id="tableColumnId" prefWidth="21.0" text="id" visible="false" />
+                  <TableColumn fx:id="tableColumnIndustry" prefWidth="100.0" text="industry" />
+                  <TableColumn fx:id="tableColumnContent" prefWidth="21.0" text="content" visible="false" />
+                  <TableColumn fx:id="tableColumnSub" prefWidth="75.0" text="Details" />
+                  <TableColumn fx:id="tableColumnTitle" prefWidth="700.0" text="Title" />
+                  <TableColumn fx:id="tableColumnTime" prefWidth="100.0" text="time" />
+                  <TableColumn fx:id="tableColumnStatus" prefWidth="75.0" text="status" />
+               </columns>
+            </TableView>
+            <Label fx:id="brandLogo" onMouseClicked="#labelAngryClicked" prefHeight="65.0" prefWidth="498.0" style="-fx-background-color: black;" text="       Angry Customer" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../images/KakaoTalk_20171226_233017063.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutX="498.0" prefHeight="65.0" prefWidth="900.0" style="-fx-background-color: black;">
+               <menus>
+                  <Menu style="-fx-font-size: 30; -fx-background-color: black; -fx-font-color: white;" text="고객불만  ">
+                     <items>
+                        <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" style="-fx-font-size: 30;" text="불만작성" />
+                        <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" text="불만조회" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30; -fx-background-color: black;" text="랭킹  ">
+                     <items>
+                        <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30;" text="마이페이지">
+                     <items>
+                        <MenuItem id="MenuItemMypage" fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+                     </items>
+                  </Menu>
+               </menus>
+               <cursor>
+                  <Cursor fx:constant="S_RESIZE" />
+               </cursor>
+            </MenuBar>
+            <Label alignment="CENTER" layoutY="100.0" prefHeight="65.0" prefWidth="1300.0" style="-fx-background-color: gray;" text="Complaint inquiry">
+               <font>
+                  <Font name="Calisto MT" size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

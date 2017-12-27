@@ -5,12 +5,12 @@ and open the template in the editor.
 --><root>
 <complaint num="1">
     <id>a</id>
-    <title>옷이마음에안들어요</title>
-    <content>환불해주세요</content>
-    <time>Tue Dec 26 12:21:12 KST 2017</time>
+    <title>찢어짐</title>
+    <content>옷이찢어져서옴</content>
+    <time>Tue Dec 26 19:36:13 KST 2017</time>
     <brandid>101</brandid>
-    <name>패션</name>
-    <industry>uniqlo</industry>
+    <name>uniqlo</name>
+    <industry>패션</industry>
     <sub>환불</sub>
     <feedbackContent>0</feedbackContent>
     <feedbackTimeend>0</feedbackTimeend>
@@ -20,14 +20,14 @@ and open the template in the editor.
     <processRating>0</processRating>
     <status>1</status>
 </complaint>
-<complaint feedbackContent="i'm so sad" feedbackTimeend="Tue Dec 26 12:45:38 KST 2017" num="2">
+<complaint num="2">
     <id>a</id>
-    <title>옷이입다가그만..</title>
-    <content>입다가그만찢어짐...</content>
-    <time>Tue Dec 26 12:22:57 KST 2017</time>
+    <title>교환</title>
+    <content>다른상품으로교환하고싶어요</content>
+    <time>Tue Dec 26 19:36:34 KST 2017</time>
     <brandid>101</brandid>
-    <name>패션</name>
-    <industry>uniqlo</industry>
+    <name>uniqlo</name>
+    <industry>패션</industry>
     <sub>교환</sub>
     <feedbackContent>0</feedbackContent>
     <feedbackTimeend>0</feedbackTimeend>
@@ -39,13 +39,81 @@ and open the template in the editor.
 </complaint>
 <complaint num="3">
     <id>a</id>
-    <title>수선부탁요</title>
-    <content>수선</content>
-    <time>Tue Dec 26 12:27:43 KST 2017</time>
+    <title>수선하고싶습니다.</title>
+    <content>바지수선어떻게 하나요?</content>
+    <time>Tue Dec 26 19:37:02 KST 2017</time>
     <brandid>101</brandid>
-    <name>패션</name>
-    <industry>uniqlo</industry>
-    <sub>AS</sub>
+    <name>uniqlo</name>
+    <industry>패션</industry>
+    <sub>A/S</sub>
+    <feedbackContent>아래대로신청바람</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 19:57:02 KST 2017</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>2</status>
+</complaint>
+<complaint num="4">
+    <id>a</id>
+    <title>환불에대해궁금합니다.</title>
+    <content>현금영수증은자동으로처리되나요?</content>
+    <time>Tue Dec 26 19:38:14 KST 2017</time>
+    <brandid>101</brandid>
+    <name>uniqlo</name>
+    <industry>패션</industry>
+    <sub>A/S</sub>
+    <feedbackContent>별도 조치 필요 없음</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 19:58:14 KST 2017</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>2</status>
+</complaint>
+<complaint num="5">
+    <id>a</id>
+    <title>수선에대하여</title>
+    <content>컷오프수선에대해궁금합니다.</content>
+    <time>Tue Dec 26 19:38:53 KST 2017</time>
+    <brandid>101</brandid>
+    <name>uniqlo</name>
+    <industry>패션</industry>
+    <sub>A/S</sub>
+    <feedbackContent>밑단을자르고세탁하는것</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 19:58:53 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>4</speedRating>
+    <detailednessRating>4</detailednessRating>
+    <processRating>4</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="6">
+    <id>a</id>
+    <title>환불에대해궁금합니다.</title>
+    <content>환불은어떻게진행되나요??</content>
+    <time>Tue Dec 26 19:39:14 KST 2017</time>
+    <brandid>101</brandid>
+    <name>uniqlo</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>검수과정거쳐반품완료</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 19:59:14 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>4</detailednessRating>
+    <processRating>3</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="7">
+    <id>a</id>
+    <title>교환언제까지할수있나요?</title>
+    <content>교환언제까지할수있나요?</content>
+    <time>Tue Dec 26 19:39:37 KST 2017</time>
+    <brandid>102</brandid>
+    <name>zara</name>
+    <industry>패션</industry>
+    <sub>교환</sub>
     <feedbackContent>0</feedbackContent>
     <feedbackTimeend>0</feedbackTimeend>
     <overallRating>0</overallRating>
@@ -54,4 +122,259 @@ and open the template in the editor.
     <processRating>0</processRating>
     <status>1</status>
 </complaint>
-</root>
+<complaint num="8">
+    <id>a</id>
+    <title>교환언제까지할수있나요?</title>
+    <content>아무 매장에서 교환이 가능한건가요?</content>
+    <time>Tue Dec 26 19:39:58 KST 2017</time>
+    <brandid>102</brandid>
+    <name>zara</name>
+    <industry>패션</industry>
+    <sub>교환</sub>
+    <feedbackContent>0</feedbackContent>
+    <feedbackTimeend>0</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>1</status>
+</complaint>
+<complaint num="9">
+    <id>a</id>
+    <title>환불에대해</title>
+    <content>반품하려면 비용이 어떻게 되나요?</content>
+    <time>Tue Dec 26 19:40:12 KST 2017</time>
+    <brandid>102</brandid>
+    <name>zara</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>언제나무료입니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 19:40:12 KST 2017</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>2</status>
+</complaint>
+<complaint num="10">
+    <id>a</id>
+    <title>어떻게 반품해야하나요?</title>
+    <content>어떻게 반품해야하나요?</content>
+    <time>Tue Dec 26 19:40:24 KST 2017</time>
+    <brandid>102</brandid>
+    <name>zara</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>매장방문, 택배수거 등등</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 20:00:24 KST 2017</feedbackTimeend>
+    <overallRating>0</overallRating>
+    <speedRating>0</speedRating>
+    <detailednessRating>0</detailednessRating>
+    <processRating>0</processRating>
+    <status>2</status>
+</complaint>
+<complaint num="11">
+    <id>a</id>
+    <title>반품기한에 대해</title>
+    <content>반품기한은어떻게 되나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>102</brandid>
+    <name>zara</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>이메일받은후로 31일내로</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 20:40:47 KST 2017</feedbackTimeend>
+    <overallRating>3</overallRating>
+    <speedRating>4</speedRating>
+    <detailednessRating>3</detailednessRating>
+    <processRating>5</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="12">
+    <id>a</id>
+    <title>환불지급에대해</title>
+    <content>어떻게 환불이 지급되나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>102</brandid>
+    <name>zara</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>결제수단과같은 방법으로</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>4</detailednessRating>
+    <processRating>4</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="13">
+    <id>a</id>
+    <title>할인적용상품환불</title>
+    <content>할인이적용된상품은어떻게 환불하는지?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>103</brandid>
+    <name>h_m</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>반품시에는 할인쿠폰의 재사용이 불가</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>3</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>5</detailednessRating>
+    <processRating>5</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="14">
+    <id>a</id>
+    <title>반품신청은요?</title>
+    <content>반품신청은어떻게할수있나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>104</brandid>
+    <name>spao</name>
+    <industry>패션</industry>
+    <sub>환불</sub>
+    <feedbackContent>마이페이지 &gt; 주문/배송조회 참고</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>4</speedRating>
+    <detailednessRating>4</detailednessRating>
+    <processRating>5</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="15">
+    <id>a</id>
+    <title>셔틀버스 운행</title>
+    <content>셔틀버스 운행은 어떻게 되나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>201</brandid>
+    <name>lotte</name>
+    <industry>숙박</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>직접 셔틀버스를 운행하고 있지 않습니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>5</detailednessRating>
+    <processRating>4</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="16">
+    <id>a</id>
+    <title>캠핑장이용</title>
+    <content>캠핑장이용시 춥지 않나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>202</brandid>
+    <name>shilla</name>
+    <industry>숙박</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>텐트 속에는 따뜻한 침낭과 무릎담요가 있음</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>5</detailednessRating>
+    <processRating>3</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="17">
+    <id>a</id>
+    <title>유아용품에 대해</title>
+    <content>유아용품이 준비되어있나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>202</brandid>
+    <name>shilla</name>
+    <industry>숙박</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>아이용품을 물로 제공해드리고 있습니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>3</overallRating>
+    <speedRating>4</speedRating>
+    <detailednessRating>3</detailednessRating>
+    <processRating>3</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="18">
+    <id>a</id>
+    <title>야외수영장이용</title>
+    <content>야외수영장은 언제 오픈하나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>202</brandid>
+    <name>shilla</name>
+    <industry>숙박</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>24시까지 오픈하고 있습니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>5</detailednessRating>
+    <processRating>5</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="19">
+    <id>a</id>
+    <title>생일쿠폰에 대해</title>
+    <content>생일쿠폰이 무엇인가요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>301</brandid>
+    <name>vips</name>
+    <industry>음식</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>1년에 한번 드리는 1만원 쿠폰입니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>5</detailednessRating>
+    <processRating>3</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="20">
+    <id>a</id>
+    <title>쿠폰확인</title>
+    <content>쿠폰은 어디서 확인하나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>302</brandid>
+    <name>ashley</name>
+    <industry>음식</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>모바일 APP 또는 홈페이지에서 가능합니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>3</overallRating>
+    <speedRating>4</speedRating>
+    <detailednessRating>4</detailednessRating>
+    <processRating>4</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="21">
+    <id>a</id>
+    <title>vip혜택</title>
+    <content>vip혜택은 무엇이있나요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>303</brandid>
+    <name>outback</name>
+    <industry>음식</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>시즌 쿠폰 및 스테이크 할인쿠폰 제공</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>3</detailednessRating>
+    <processRating>3</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="22">
+    <id>a</id>
+    <title>v포장관련</title>
+    <content>포장도 가능한가요?</content>
+    <time>Tue Dec 26 19:40:47 KST 2017</time>
+    <brandid>303</brandid>
+    <name>outback</name>
+    <industry>음식</industry>
+    <sub>편의시설</sub>
+    <feedbackContent>20분 전에 연락주시면 가능합니다.</feedbackContent>
+    <feedbackTimeend>Tue Dec 26 21:40:47 KST 2017</feedbackTimeend>
+    <overallRating>4</overallRating>
+    <speedRating>5</speedRating>
+    <detailednessRating>5</detailednessRating>
+    <processRating>5</processRating>
+    <status>3</status>
+</complaint>
+<complaint num="23"><id>a</id><title>ddd</title><content>dddd</content><time>Wed Dec 27 04:43:36 KST 2017</time><brandid>104</brandid><name>패션</name><industry>dmaris</industry><sub>dd</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint><complaint num="24"><id>a</id><title>맛있어요</title><content>그럭저럭?</content><time>Wed Dec 27 10:52:16 KST 2017</time><brandid>104</brandid><name>패션</name><industry>vips</industry><sub>맛</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint><complaint num="25"><id>a</id><title>으악</title><content>우엑</content><time>Wed Dec 27 11:09:12 KST 2017</time><brandid>104</brandid><name>패션</name><industry>vips</industry><sub>맛</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint><complaint num="26"><id>a</id><title>우엑</title><content>맛없더</content><time>Wed Dec 27 11:18:21 KST 2017</time><brandid>301</brandid><name>vips</name><industry>음식</industry><sub>맛</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint><complaint num="27"><id>a</id><title>ㅇㅇ</title><content>오케이</content><time>Wed Dec 27 11:22:28 KST 2017</time><brandid>301</brandid><name>vips</name><industry>음식</industry><sub>야</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint><complaint num="28"><id>a</id><title>너만흰색</title><content>그래서 고름</content><time>Wed Dec 27 11:25:32 KST 2017</time><brandid>304</brandid><name>shilla</name><industry>음식</industry><sub>색깔</sub><feedbackContent>0</feedbackContent><feedbackTimeend>0</feedbackTimeend><overallRating>0</overallRating><speedRating>0</speedRating><detailednessRating>0</detailednessRating><processRating>0</processRating><status>1</status></complaint></root>

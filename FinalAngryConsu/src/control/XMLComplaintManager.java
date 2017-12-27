@@ -24,6 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
 /**
@@ -190,22 +191,95 @@ public class XMLComplaintManager {
         dbFactory = DocumentBuilderFactory.newInstance();
         dBuilder = dbFactory.newDocumentBuilder();
         doc = dBuilder.parse(xmlFile);
+        
         NodeList nList = doc.getElementsByTagName("complaint");
         for (int i = 0; i < nList.getLength(); i++) {
+            System.out.println(nList.getLength());
             Node nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                if (element.getAttribute("num").equals(num)) {
-                    System.out.println("same as "+num);
-                    System.out.println(feedbackinfo.getContent());
-                    System.out.println(feedbackinfo.getTimeEnd());
-                    element.
-                    element.setAttribute("feedbackContent", feedbackinfo.getContent());
-                    element.setAttribute("feedbackTimeend", feedbackinfo.getTimeEnd());
+                if(element.getAttribute("num").equals(num)){
+                    NodeList list = nNode.getChildNodes();
+                    for (int j = 0 ; j < list.getLength();j++){
+                        Node nnn = list.item(j);
+                        if("feedbackContent".equals(nnn.getNodeName())){
+                            nnn.setTextContent(feedbackinfo.getContent());
+                        }
+                        if("feedbackTimeend".equals(nnn.getNodeName())){
+                            nnn.setTextContent(feedbackinfo.getTimeEnd()); 
+                        }
+                        if("status".equals(nnn.getNodeName())){
+                            nnn.setTextContent("2"); 
+                        }
+                        
+                    }
                 }
             }
         }
+        
+        
+        
+        
+        
+        
+        Element root = doc.getDocumentElement();
+        NodeList rootlist = root.getChildNodes();
+        
+        
+        for(int i =0; i< rootlist.getLength();i++){
+            
+            /*
+            Element complaint = (Element) rootlist.item(i);
+            NodeList complaintList = complaint.getChildNodes();
+ 
+            Element B = (Element) complaintList.item(1);
+            NodeList titleList = B.getChildNodes();
+            
+            NodeList fbcList = I.getChildNodes();
+            NodeList fbtList = J.getChildNodes();
+            NodeList fbsList = O.getChildNodes();
+            Text titletext = (Text)titleList.item(0);
+            String title_i = titletext.getData();
+            if(title_i.equals(title)){
+                Text fbcontent = (Text);
+                Text fbtime;
+                Text fbstatus;
+                
+            }
+            NodeList fbc = id.getChildNodes();
+            
+        }
+        */
+            
+        
+        /*
+        NodeList nList = doc.getElementsByTagName("complaint");
+        
+        for (int i = 0; i < nList.getLength(); i++) {
+            
+            
+            Element complaint = (Element)nList.item(i);
+            NodeList complaintList = complaint.getChildNodes();
+            System.out.println(i +" : " +complaintList.getLength());
+            Element number = (Element)complaintList.item(0);
+            if(number.getAttribute("num").equals(num)){
+                   
+                    Node fbc = complaintList.item(9);
+                    Node fbt = complaintList.item(10);
+                    Node fbs = complaintList.item(15);
+                     System.out.println("same as "+num);
+                    System.out.println(fbc.toString());
+                    System.out.println(fbt.toString());
+                    
+                    fbc.setTextContent(feedbackinfo.getContent());
+                    fbt.setTextContent(feedbackinfo.getTimeEnd());
+                    fbs.setTextContent("2");
 
+            }
+            */
+        }
+
+       
         doc.getDocumentElement().normalize();
 
         DOMSource xmlDOM = new DOMSource(doc);
@@ -219,21 +293,39 @@ public class XMLComplaintManager {
         dbFactory = DocumentBuilderFactory.newInstance();
         dBuilder = dbFactory.newDocumentBuilder();
         doc = dBuilder.parse(xmlFile);
-        
+         
         NodeList nList = doc.getElementsByTagName("complaint");
         for (int i = 0; i < nList.getLength(); i++) {
+            System.out.println(nList.getLength());
             Node nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                if (element.getAttribute("num").equals(num)) {
-                    element.setAttribute("overallRating", Integer.toString(ratinginfo.getOverallRating()));
-                    element.setAttribute("speedRating", Integer.toString(ratinginfo.getSpeedRating()));
-                    element.setAttribute("detailednessRating", Integer.toString(ratinginfo.getdetailednessRating()));
-                    element.setAttribute("processRating", Integer.toString(ratinginfo.getProcessRating()));
-                       
+                if(element.getAttribute("num").equals(num)){
+                    NodeList list = nNode.getChildNodes();
+                    for (int j = 0 ; j < list.getLength();j++){
+                        Node nnn = list.item(j);
+                        if("overallRating".equals(nnn.getNodeName())){
+                            nnn.setTextContent(Integer.toString(ratinginfo.getOverallRating()));
+                        }
+                        if("speedRating".equals(nnn.getNodeName())){
+                            nnn.setTextContent(Integer.toString(ratinginfo.getSpeedRating()));
+                        }
+                        if("detailednessRating".equals(nnn.getNodeName())){
+                            nnn.setTextContent(Integer.toString(ratinginfo.getdetailednessRating()));
+                        }
+                        if("processRating".equals(nnn.getNodeName())){
+                            nnn.setTextContent(Integer.toString(ratinginfo.getProcessRating()));
+                        }
+                        if("status".equals(nnn.getNodeName())){
+                            nnn.setTextContent("3");
+                        }
+                        
+                    }
                 }
             }
         }
+        
+        
 
         doc.getDocumentElement().normalize();
 
@@ -241,4 +333,17 @@ public class XMLComplaintManager {
         StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
         TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
     }
+    public int searchXML(String filePath, String fileName) throws IOException, ParserConfigurationException,
+            SAXException, TransformerConfigurationException, TransformerException {
+        xmlFile = new File(filePath, fileName);
+        dbFactory = DocumentBuilderFactory.newInstance();
+        dBuilder = dbFactory.newDocumentBuilder();
+        doc = dBuilder.parse(xmlFile);
+        Node nNode;
+        Element element;
+        String A = "";
+        NodeList nList = doc.getElementsByTagName("complaint");
+        return nList.getLength();
+     }
+
 }

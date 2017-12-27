@@ -15,11 +15,14 @@ public class Ranking {
     private Rating rating;
     private int numComplaint;
 
+    private int rank;
+
     public Ranking(Brand brand, int BCI, Rating rating, int numComplaint) {
         this.brand = brand;
         this.BCI = BCI;
         this.rating = rating;
         this.numComplaint = numComplaint;
+        this.rank = 0;
     }
 
     public Brand getBrand() {
@@ -54,6 +57,14 @@ public class Ranking {
 
     public void setNumComplaint(int numComplaint) {
         this.numComplaint = numComplaint;
+    }
+    
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
     }
     
 }

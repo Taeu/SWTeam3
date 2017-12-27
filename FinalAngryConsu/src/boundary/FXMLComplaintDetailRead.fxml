@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLComplaintDetailReadController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1500.0">
+         <children>
+            <Label fx:id="brandLogo" onMouseClicked="#labelAngryCustomerClicked" prefHeight="65.0" prefWidth="498.0" style="-fx-background-color: black;" text="        Angry Customer" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../images/KakaoTalk_20171226_233017063.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutX="479.0" prefHeight="65.0" prefWidth="846.0" style="-fx-background-color: black;">
+               <menus>
+                  <Menu style="-fx-font-size: 30; -fx-background-color: black; -fx-font-color: white;" text="고객불만  ">
+                     <items>
+                        <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" style="-fx-font-size: 30;" text="불만작성" />
+                        <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" style="-fx-font-size: 30;" text="불만조회" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30; -fx-background-color: black;" text="랭킹  ">
+                     <items>
+                        <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30;" text="마이페이지">
+                     <items>
+                        <MenuItem id="MenuItemMypage" fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+                     </items>
+                  </Menu>
+               </menus>
+               <cursor>
+                  <Cursor fx:constant="S_RESIZE" />
+               </cursor>
+            </MenuBar>
+            <Label layoutX="78.0" layoutY="456.0" prefHeight="41.0" prefWidth="150.0" text="Brand ">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="562.0" prefHeight="47.0" prefWidth="126.0" text="Title :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="516.0" prefHeight="19.0" prefWidth="151.0" text="Sub  :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textAreaContent" editable="false" layoutX="78.0" layoutY="622.0" prefHeight="230.0" prefWidth="913.0" />
+            <TextField fx:id="textFieldTitle" editable="false" layoutX="198.0" layoutY="565.0" prefHeight="29.0" prefWidth="723.0" />
+            <TextField fx:id="textFieldSub" editable="false" layoutX="200.0" layoutY="523.0" />
+            <ImageView fx:id="a1" fitHeight="200.0" fitWidth="200.0" layoutX="857.0" layoutY="333.0" onMouseClicked="#a1Clicked" pickOnBounds="true" />
+            <TextArea fx:id="textAreaFeedbackContent" editable="false" layoutX="78.0" layoutY="934.0" prefHeight="359.0" prefWidth="903.0" />
+            <Button fx:id="btnFeedbackSubmit" layoutX="773.0" layoutY="1309.0" mnemonicParsing="false" onAction="#btnFeedbackSubmitCliked" prefHeight="21.0" prefWidth="197.0" text="Submit" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbrt2" alignment="CENTER" layoutY="1463.0" prefHeight="14.0" prefWidth="1300.0" style="-fx-background-color: gray;" text="Rating Score!">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbfb" layoutX="-18.0" layoutY="328.0" prefHeight="50.0" prefWidth="1300.0" style="-fx-background-color: black;" text="     Feedback" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="47.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbrt" layoutX="-2.0" layoutY="1403.0" prefHeight="50.0" prefWidth="1300.0" style="-fx-background-color: black;" text="     Rating" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbfb2" alignment="CENTER" layoutX="-18.0" layoutY="381.0" prefHeight="12.0" prefWidth="1300.0" style="-fx-background-color: gray;">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="a111" fitHeight="200.0" fitWidth="200.0" layoutX="754.0" layoutY="429.0" onMouseClicked="#a111Clicked" pickOnBounds="true" />
+            <TextField fx:id="textFieldName1" editable="false" layoutX="200.0" layoutY="465.0" />
+            <Label fx:id="brandLogo1" alignment="CENTER" layoutX="73.0" layoutY="1577.0" onMouseClicked="#labelAngryCustomerClicked" prefHeight="65.0" prefWidth="498.0" style="-fx-background-color: black;" text="Overall Rating" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRatingSubmit" layoutX="778.0" layoutY="1893.0" mnemonicParsing="false" onAction="#btnFeedbackSubmitCliked" prefHeight="21.0" prefWidth="197.0" text="Submit" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelOverall" layoutX="193.0" layoutY="1665.0" prefHeight="208.0" prefWidth="263.0" text="5" visible="false">
+               <font>
+                  <Font size="150.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="brandLogo2" fitHeight="150.0" fitWidth="352.0" layoutX="457.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="60.0" layoutY="881.0" prefHeight="41.0" prefWidth="150.0" text="Feedback">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

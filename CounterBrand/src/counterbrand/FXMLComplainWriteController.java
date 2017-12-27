@@ -200,7 +200,6 @@ public class FXMLComplainWriteController implements Initializable {
             try {
                 complainManager.editXML(fp.a, "complain.xml", hm);
                 complainManager.editXML(fp.a, "complainDetail.xml", hm);
-                
             } catch (Exception e) {
             }
         } else if (complainSubmitList.get(Integer.toString(a)) != null) {

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLReportController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1450.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-weight: 5;">
+         <children>
+            <Label fx:id="labelCounterBrand1" alignment="CENTER" layoutY="60.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="58.0" prefWidth="1300.0" style="-fx-background-color: gray; -fx-font-size: 40; -fx-font-family: bold; -fx-font-color: black;" text="Report for ZARA" textFill="#0a0000">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCounterBrand2" alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="47.0" prefWidth="1300.0" style="-fx-background-color: gray; -fx-font-size: 30; -fx-font-family: bold;" text="December 27, 2017" textFill="#1b0000">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutY="-6.0" prefHeight="71.0" prefWidth="1300.0" style="-fx-background-color: black;" text="      Angry Customer" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../images/KakaoTalk_20171226_233017063.png" />
+               </image>
+            </ImageView>
+            <TextArea layoutX="-9.0" layoutY="237.0" prefHeight="200.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 5;" text="춥고 졸리고 배고프고 지쳤습니다.&#10;이제 그만 하고싶습니다.&#10;STOP,,,,">
+               <font>
+                  <Font name="Calisto MT" size="15.0" />
+               </font></TextArea>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="165.0" prefHeight="71.0" prefWidth="1300.0" style="-fx-background-color: black;" text="Over all Comments" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="1.0" layoutY="436.0">
+               <image>
+                  <Image url="@../images/1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="306.0" fitWidth="400.0" layoutX="1.0" layoutY="1116.0">
+               <image>
+                  <Image url="@../images/6.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="1.0" layoutY="779.0">
+               <image>
+                  <Image url="@../images/4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="650.0" layoutY="779.0">
+               <image>
+                  <Image url="@../images/5.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="650.0" layoutY="436.0">
+               <image>
+                  <Image url="@../images/2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="650.0" layoutY="1116.0" />
+            <Label alignment="CENTER" layoutX="1.0" layoutY="733.0" prefHeight="46.0" prefWidth="1300.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="1.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="1077.0" prefHeight="46.0" prefWidth="1300.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="1.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="1416.0" prefHeight="46.0" prefWidth="1300.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="1.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="401.0" layoutY="436.0" prefHeight="297.0" prefWidth="252.0" text="이제 안합니다" />
+            <TextArea layoutX="1050.0" layoutY="436.0" prefHeight="298.0" prefWidth="232.0" text="진심입니다" />
+            <TextArea layoutX="398.0" layoutY="780.0" prefHeight="298.0" prefWidth="252.0" text="배고파요" />
+            <TextArea layoutX="1048.0" layoutY="780.0" prefHeight="298.0" prefWidth="252.0" text="그만해" />
+            <TextArea layoutX="401.0" layoutY="1120.0" prefHeight="298.0" prefWidth="252.0" text="안ㄷ돼" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

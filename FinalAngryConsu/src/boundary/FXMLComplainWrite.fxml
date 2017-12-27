@@ -1,50 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLComplainWriteController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="917.0" prefWidth="1300.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1650.0" prefWidth="1300.0" style="-fx-background-color: white;">
          <children>
-            <Label layoutX="27.0" layoutY="95.0" prefHeight="15.0" prefWidth="45.0" text="산업 : " />
-            <Label layoutX="244.0" layoutY="95.0" prefHeight="15.0" prefWidth="45.0" text="브랜드 :" />
-            <Label layoutX="458.0" layoutY="95.0" prefHeight="15.0" prefWidth="60.0" text="세부사항 :" />
-            <Label layoutX="20.0" layoutY="51.0" prefHeight="15.0" prefWidth="60.0" text="불만작성" />
-            <Label layoutX="27.0" layoutY="131.0" prefHeight="15.0" prefWidth="45.0" text="제목 :" />
-            <Label layoutX="21.0" layoutY="160.0" prefHeight="15.0" prefWidth="60.0" text="세부내용 :" />
-            <TextArea fx:id="textAreaContent" layoutX="27.0" layoutY="189.0" prefHeight="200.0" prefWidth="630.0" />
-            <TextField fx:id="textFieldTitle" layoutX="80.0" layoutY="127.0" prefHeight="23.0" prefWidth="577.0" />
-            <Button fx:id="btnComplainSubmit" layoutX="578.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnComplainSubmitCliked" prefHeight="36.0" prefWidth="78.0" text="불만접수" />
-            <Label fx:id="labelCounterBrand" layoutX="19.0" layoutY="14.0" onMouseClicked="#labelCounterBrandCliked" text="CounterBrand" textFill="#8d55ed">
+            <Label fx:id="labelCounterBrand1" alignment="CENTER" layoutY="60.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="58.0" prefWidth="1281.0" style="-fx-background-color: gray; -fx-font-size: 40; -fx-font-family: bold; -fx-font-color: black;" text="Write Your Complaint!" textFill="#0a0000">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="overall" layoutX="220.0" layoutY="721.0" />
-            <TextField fx:id="textFieldName" layoutX="301.0" layoutY="91.0" />
-            <TextField fx:id="textFieldSub" layoutX="518.0" layoutY="91.0" />
-            <Label layoutX="27.0" layoutY="429.0" prefHeight="15.0" prefWidth="71.0" text="피드백 : " />
-            <TextArea fx:id="textAreaFeedbackContent" layoutX="27.0" layoutY="449.0" prefHeight="200.0" prefWidth="630.0" />
-            <Button fx:id="btnFeedbackSubmit" layoutX="578.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnFeedbackSubmitCliked" prefHeight="36.0" prefWidth="78.0" text="피드백접수" />
-            <Label layoutX="29.0" layoutY="694.0" prefHeight="15.0" prefWidth="81.0" text="평가 점수 : " />
-            <Label layoutX="32.0" layoutY="723.0" prefHeight="19.0" prefWidth="109.0" text="평가항목" />
-            <Label layoutX="164.0" layoutY="723.0" prefHeight="19.0" prefWidth="109.0" text="overall" />
-            <Label layoutX="164.0" layoutY="754.0" prefHeight="19.0" prefWidth="109.0" text="speed" />
-            <Label layoutX="415.0" layoutY="723.0" prefHeight="19.0" prefWidth="109.0" text="specificity" />
-            <Label layoutX="415.0" layoutY="754.0" prefHeight="19.0" prefWidth="109.0" text="proecess" />
-            <Label layoutX="32.0" layoutY="784.0" prefHeight="19.0" prefWidth="109.0" text="비고" />
-            <TextArea fx:id="textAreaRatingContent" layoutX="86.0" layoutY="784.0" prefHeight="119.0" prefWidth="562.0" />
-            <Button fx:id="btnEvaluate" layoutX="657.0" layoutY="857.0" mnemonicParsing="false" onAction="#btnEvalutateCliked" prefHeight="36.0" prefWidth="78.0" text="평가완료" />
-            <TextField fx:id="textFieldIndustry1" layoutX="84.0" layoutY="91.0" />
-            <TextField fx:id="speed" layoutX="220.0" layoutY="752.0" />
-            <TextField fx:id="specificity" layoutX="488.0" layoutY="721.0" />
-            <TextField fx:id="process" layoutX="488.0" layoutY="752.0" />
+            <Label fx:id="labelCounterBrand2" alignment="CENTER" contentDisplay="CENTER" layoutY="113.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="52.0" prefWidth="1282.0" style="-fx-background-color: gray; -fx-font-size: 30; -fx-font-family: bold;" text="December 27, 2017" textFill="#1b0000">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutY="165.0" prefHeight="79.0" prefWidth="1282.0" style="-fx-background-color: black;">
+               <children>
+                  <Button fx:id="btnFood" layoutX="206.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnFoodClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Food">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnFashion" layoutX="884.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnFashionClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Fashion">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAccommodation" layoutX="541.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnAccommodationClicked" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white; -fx-font-family: bold;" text="Accommodation">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="brandLogo" layoutX="-22.0" layoutY="-1.0" onMouseClicked="#labelAngryCustomerClicked" prefHeight="64.0" prefWidth="498.0" style="-fx-background-color: black;" text="        Angry Customer" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="80.0">
+               <image>
+                  <Image url="@../images/KakaoTalk_20171226_233017063.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutX="437.0" layoutY="-2.0" prefHeight="65.0" prefWidth="846.0" style="-fx-background-color: black;">
+               <menus>
+                  <Menu style="-fx-font-size: 30; -fx-background-color: black; -fx-font-color: white;" text="고객불만  ">
+                     <items>
+                        <MenuItem fx:id="menuComplainWrite" mnemonicParsing="false" onAction="#menuComplainWriteCliked" style="-fx-font-size: 30;" text="불만작성" />
+                        <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" style="-fx-font-size: 30;" text="불만조회" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30; -fx-background-color: black;" text="랭킹  ">
+                     <items>
+                        <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 30;" text="마이페이지">
+                     <items>
+                        <MenuItem id="MenuItemMypage" fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
+                     </items>
+                  </Menu>
+               </menus>
+               <cursor>
+                  <Cursor fx:constant="S_RESIZE" />
+               </cursor>
+            </MenuBar>
+            <Label layoutX="63.0" layoutY="265.0" prefHeight="41.0" prefWidth="150.0" text="Brands ">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="530.0" prefHeight="47.0" prefWidth="126.0" text="Title :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="483.0" prefHeight="19.0" prefWidth="151.0" text="Sub  :">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textAreaContent" layoutX="211.0" layoutY="588.0" prefHeight="230.0" prefWidth="897.0" />
+            <TextField fx:id="textFieldTitle" layoutX="213.0" layoutY="539.0" prefHeight="29.0" prefWidth="723.0" />
+            <Button fx:id="btnComplainSubmit" layoutX="911.0" layoutY="834.0" mnemonicParsing="false" onAction="#btnComplainSubmitCliked" prefHeight="32.0" prefWidth="197.0" text="Submit">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textFieldName" layoutX="214.0" layoutY="492.0" />
+            <Pane layoutX="234.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: redred;">
+               <children>
+                  <Pane layoutX="-24.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;">
+                     <children>
+                        <ImageView fx:id="a" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#aClicked" pickOnBounds="true" />
+                     </children></Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="659.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="a11" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#a11Clicked" pickOnBounds="true" />
+               </children></Pane>
+            <Pane layoutX="434.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="a1" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#a1Clicked" pickOnBounds="true" />
+               </children></Pane>
+            <Pane layoutX="886.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="a111" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#a111Clicked" pickOnBounds="true" />
+               </children></Pane>
+            <TextArea fx:id="textAreaFeedbackContent" layoutX="211.0" layoutY="993.0" prefHeight="201.0" prefWidth="903.0" />
+            <Button fx:id="btnFeedbackSubmit" layoutX="917.0" layoutY="1213.0" mnemonicParsing="false" onAction="#btnFeedbackSubmitCliked" prefHeight="21.0" prefWidth="197.0" text="Submit">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbrt2" alignment="CENTER" layoutY="1328.0" prefHeight="14.0" prefWidth="1300.0" style="-fx-background-color: gray;" text="Rating Score!">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="126.0" layoutY="1413.0" prefHeight="47.0" prefWidth="252.0" text="Oerall Rating" />
+            <Label layoutX="126.0" layoutY="1449.0" prefHeight="47.0" prefWidth="252.0" text="Detailedness" />
+            <Label layoutX="126.0" layoutY="1489.0" prefHeight="47.0" prefWidth="252.0" text="Speed            " />
+            <Label layoutX="126.0" layoutY="1524.0" prefHeight="47.0" prefWidth="252.0" text="Process         " />
+            <RadioButton fx:id="overall1" layoutX="269.0" layoutY="1427.0" mnemonicParsing="false" text="1" />
+            <RadioButton fx:id="overall2" layoutX="322.0" layoutY="1426.0" mnemonicParsing="false" text="2" />
+            <RadioButton fx:id="overall4" layoutX="419.0" layoutY="1427.0" mnemonicParsing="false" text="4" />
+            <RadioButton fx:id="overall3" layoutX="371.0" layoutY="1427.0" mnemonicParsing="false" text="3" />
+            <RadioButton fx:id="overall5" layoutX="472.0" layoutY="1427.0" mnemonicParsing="false" text="5" />
+            <RadioButton fx:id="d1" layoutX="269.0" layoutY="1463.0" mnemonicParsing="false" text="1" />
+            <RadioButton fx:id="d2" layoutX="322.0" layoutY="1462.0" mnemonicParsing="false" text="2" />
+            <RadioButton fx:id="d4" layoutX="419.0" layoutY="1463.0" mnemonicParsing="false" text="4" />
+            <RadioButton fx:id="d3" layoutX="371.0" layoutY="1463.0" mnemonicParsing="false" text="3" />
+            <RadioButton fx:id="d5" layoutX="472.0" layoutY="1463.0" mnemonicParsing="false" text="5" />
+            <RadioButton fx:id="sp1" layoutX="269.0" layoutY="1502.0" mnemonicParsing="false" text="1" />
+            <RadioButton fx:id="sp2" layoutX="323.0" layoutY="1502.0" mnemonicParsing="false" text="2" />
+            <RadioButton fx:id="sp4" layoutX="420.0" layoutY="1503.0" mnemonicParsing="false" text="4" />
+            <RadioButton fx:id="sp3" layoutX="372.0" layoutY="1503.0" mnemonicParsing="false" text="3" />
+            <RadioButton fx:id="sp5" layoutX="473.0" layoutY="1503.0" mnemonicParsing="false" text="5" />
+            <RadioButton fx:id="p1" layoutX="269.0" layoutY="1537.0" mnemonicParsing="false" text="1" />
+            <RadioButton fx:id="p2" layoutX="322.0" layoutY="1536.0" mnemonicParsing="false" text="2" />
+            <RadioButton fx:id="p4" layoutX="419.0" layoutY="1537.0" mnemonicParsing="false" text="4" />
+            <RadioButton fx:id="p3" layoutX="371.0" layoutY="1537.0" mnemonicParsing="false" text="3" />
+            <RadioButton fx:id="p5" layoutX="472.0" layoutY="1537.0" mnemonicParsing="false" text="5" />
+            <TextArea fx:id="textAreaRatingContent" layoutX="556.0" layoutY="1446.0" prefHeight="115.0" prefWidth="558.0" />
+            <Label layoutX="556.0" layoutY="1409.0" prefHeight="37.0" prefWidth="252.0" text="Others" />
+            <Button fx:id="btnRatingSubmit" layoutX="911.0" layoutY="1582.0" mnemonicParsing="false" onAction="#btnRatingSubmitCliked" prefHeight="21.0" prefWidth="197.0" text="Submit">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbfb" layoutY="891.0" prefHeight="50.0" prefWidth="1300.0" style="-fx-background-color: black;" text="     Feedback" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbrt" layoutY="1269.0" prefHeight="50.0" prefWidth="1300.0" style="-fx-background-color: black;" text="     Rating" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="50.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbfb2" alignment="CENTER" layoutY="950.0" prefHeight="12.0" prefWidth="1300.0" style="-fx-background-color: gray;">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
   </content>
 </ScrollPane>

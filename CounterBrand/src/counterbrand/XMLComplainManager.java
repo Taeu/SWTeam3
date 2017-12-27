@@ -156,6 +156,7 @@ public class XMLComplainManager {
                 Element element = (Element) nNode;
                 if (element.getAttribute("id").equals(id)) {
                     nNode.getParentNode().removeChild(nNode);
+                    nNode.setTextContent("");
                 }
             }
         }

@@ -19,8 +19,161 @@ and open the template in the editor.
         <speed>4.4</speed>
         <detailedness>4.6</detailedness>
         <process>4.5</process>
-        <max1>uniqlo</max1>
-        <max2>zara</max2>
-        <max3>spao</max3>
+    </brandranking>
+    <brandranking num="2">
+        <id>zara</id>
+        <name>zara</name>
+        <industry>패션</industry>
+        <bci>4.4</bci>
+        <rank>2</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.4</overall>
+        <speed>4.3</speed>
+        <detailedness>4.5</detailedness>
+        <process>4.4</process>
+    </brandranking>
+    <brandranking num="3">
+        <id>h&m</id>
+        <name>h&m</name>
+        <industry>패션</industry>
+        <bci>4</bci>
+        <rank>4</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4</overall>
+        <speed>4</speed>
+        <detailedness>3.8</detailedness>
+        <process>4.2</process>
+    </brandranking>
+    <brandranking num="4">
+        <id>spao</id>
+        <name>spao</name>
+        <industry>패션</industry>
+        <bci>4.2</bci>
+        <rank>3</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.2</overall>
+        <speed>4.4</speed>
+        <detailedness>4</detailedness>
+        <process>4.2</process>
+    </brandranking>
+    <brandranking num="5">
+        <id>lotte</id>
+        <name>lotte</name>
+        <industry>숙박</industry>
+        <bci>4.3</bci>
+        <rank>2</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.3</overall>
+        <speed>4.3</speed>
+        <detailedness>4.4</detailedness>
+        <process>4.2</process>
+    </brandranking>
+    <brandranking num="6">
+        <id>shilla</id>
+        <name>shilla</name>
+        <industry>숙박</industry>
+        <bci>4.4</bci>
+        <rank>1</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.4</overall>
+        <speed>4.4</speed>
+        <detailedness>4.5</detailedness>
+        <process>4.3</process>
+    </brandranking>
+    <brandranking num="7">
+        <id>hilton</id>
+        <name>hilton</name>
+        <industry>숙박</industry>
+        <bci>4.1</bci>
+        <rank>3</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.1</overall>
+        <speed>4.1</speed>
+        <detailedness>4.4</detailedness>
+        <process>3.8</process>
+    </brandranking>
+    <brandranking num="8">
+        <id>weston</id>
+        <name>weston</name>
+        <industry>숙박</industry>
+        <bci>4</bci>
+        <rank>4</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4</overall>
+        <speed>4</speed>
+        <detailedness>4.2</detailedness>
+        <process>3.8</process>
+    </brandranking>
+    <brandranking num="9">
+        <id>vips</id>
+        <name>vips</name>
+        <industry>음식</industry>
+        <bci>4.8</bci>
+        <rank>1</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.8</overall>
+        <speed>4.7</speed>
+        <detailedness>4.9</detailedness>
+        <process>4.8</process>
+    </brandranking>
+    <brandranking num="10">
+        <id>ashley</id>
+        <name>ashley</name>
+        <industry>음식</industry>
+        <bci>4.5</bci>
+        <rank>3</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.5</overall>
+        <speed>4.5</speed>
+        <detailedness>4.4</detailedness>
+        <process>4.6</process>
+    </brandranking>
+    <brandranking num="11">
+        <id>outback</id>
+        <name>outback</name>
+        <industry>음식</industry>
+        <bci>4.7</bci>
+        <rank>2</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.7</overall>
+        <speed>4.5</speed>
+        <detailedness>4.9</detailedness>
+        <process>4.7</process>
+    </brandranking>
+    <brandranking num="12">
+        <id>DMARIS</id>
+        <name>DMARIS</name>
+        <industry>음식</industry>
+        <bci>4.3</bci>
+        <rank>4</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>30</numComplaint>
+        <overall>4.3</overall>
+        <speed>4.4</speed>
+        <detailedness>4.2</detailedness>
+        <process>4.3</process>
+    </brandranking>
+    <brandranking num="13">
+        <id>tgif</id>
+        <name>tgif</name>
+        <industry>음식</industry>
+        <bci>4,1</bci>
+        <rank>5</rank>
+        <rankTime>0</rankTime>
+        <numComplaint>29</numComplaint>
+        <overall>4.1</overall>
+        <speed>4</speed>
+        <detailedness>4.2</detailedness>
+        <process>4.1</process>
     </brandranking>
 </root>

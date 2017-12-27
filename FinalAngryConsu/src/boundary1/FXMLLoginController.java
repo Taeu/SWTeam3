@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package boundary;
+package boundary1;
 
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,8 +22,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javax.swing.ButtonGroup;
 import others.*;
 
 /**
@@ -28,7 +34,7 @@ import others.*;
  *
  * @author user
  */
-public class FXMLLogin2Controller implements Initializable {
+public class FXMLLoginController implements Initializable {
 
     @FXML
     private Label labelCounterBrand;
@@ -41,11 +47,11 @@ public class FXMLLogin2Controller implements Initializable {
     @FXML
     private Button btnCustomerRegister;
     @FXML
+    private Button btnLogin;
+    @FXML
     private RadioButton radioLoginType_a;
     @FXML
     private RadioButton radioLoginType_b;
-    @FXML
-    private Button btnLogin;
 
     /**
      * Initializes the controller class.
@@ -79,15 +85,31 @@ public class FXMLLogin2Controller implements Initializable {
 
     @FXML
     private void btnLoginCliked(ActionEvent event) throws IOException {
-        /*
-        NextForm next = new NextForm("FXMLMainPage.fxml");
+        /*NextForm next = new NextForm("FXMLMainPage.xml");
         next.show(btnLogin);
         */
-         Stage stage = (Stage) btnLogin.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));
+        final ToggleGroup group = new ToggleGroup();
+        radioLoginType_a.setToggleGroup(group);
+        radioLoginType_b.setToggleGroup(group);
+        group.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
+    public void changed(ObservableValue<? extends Toggle> ov,
+        Toggle old_toggle, Toggle new_toggle) {
+            if (group.getSelectedToggle() != null) {
+                if(group.getSelectedToggle().getUserData().toString().equals("일반회원")){
+                    
+                }
+                else{
+                    
+                }
+            }                
+        }
+});
+        Stage stage = (Stage) btnLogin.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-    
+        
+        
+    }   
 }

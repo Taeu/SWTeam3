@@ -28,7 +28,7 @@ import org.xml.sax.SAXException;
  *
  * @author user
  */
-public class XMLCurrentClikedUserManager {
+public class XMLCurrentClickedUserManager {
     Document doc;
     private File xmlFile;
     DocumentBuilderFactory dbFactory;
@@ -63,13 +63,11 @@ public class XMLCurrentClikedUserManager {
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
 
-                dataMapper.put("id", element.getElementsByTagName("id").item(0).getTextContent());
-                dataMapper.put("password", element.getElementsByTagName("password").item(0).getTextContent());
                 dataMapper.put("name", element.getElementsByTagName("name").item(0).getTextContent());
-             
-                xmlDataHashMap.put(element.getAttribute("status"), dataMapper);
+                dataMapper.put("status", element.getElementsByTagName("status").item(0).getTextContent());
+                dataMapper.put("id", element.getElementsByTagName("id").item(0).getTextContent());
+                xmlDataHashMap.put(element.getAttribute("num"), dataMapper);
             }
-            System.out.println("Dd'");
                     
         }
 
@@ -86,16 +84,22 @@ public class XMLCurrentClikedUserManager {
         System.out.println(root.getNodeName());
         if (root.getNodeType() == Node.ELEMENT_NODE) {
             Element clikeduser = docs.createElement("clikeduser");
-            clikeduser.setAttribute("id", cliked.get("id").toString());
+            clikeduser.setAttribute("num", cliked.get("num").toString());
             root.appendChild(clikeduser);
 
             Element name = docs.createElement("name");
             name.appendChild(docs.createTextNode(cliked.get("name").toString()));
             clikeduser.appendChild(name);
+            
+            Element status = docs.createElement("status");
+            status.appendChild(docs.createTextNode(cliked.get("status").toString()));
+            clikeduser.appendChild(status);
+            
+            Element id = docs.createElement("id");
+            id.appendChild(docs.createTextNode(cliked.get("id").toString()));
+            clikeduser.appendChild(id);
 
-            Element password = docs.createElement("password");
-            password.appendChild(docs.createTextNode(cliked.get("password").toString()));
-            clikeduser.appendChild(password);
+           
 
            
         }
@@ -107,7 +111,7 @@ public class XMLCurrentClikedUserManager {
         TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
     }
 
-    public void deleteIdXML(String filePath, String fileName, String num) throws IOException, ParserConfigurationException,
+    public void deleteAllXML(String filePath, String fileName) throws IOException, ParserConfigurationException,
             SAXException, TransformerConfigurationException, TransformerException {
         xmlFile = new File(filePath, fileName);
         dbFactory = DocumentBuilderFactory.newInstance();
@@ -115,13 +119,12 @@ public class XMLCurrentClikedUserManager {
         doc = dBuilder.parse(xmlFile);
 
         NodeList nList = doc.getElementsByTagName("clikeduser");
-        for (int i = 0; i < nList.getLength(); i++) {
-            Node nNode = nList.item(i);
+        System.out.println(nList.getLength());
+        for (int i = 0; i < nList.getLength(); ) {
+            Node nNode = nList.item(nList.getLength()-1);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                if (element.getAttribute("num").equals(num)) {
                     nNode.getParentNode().removeChild(nNode);
-                }
             }
         }
 
@@ -131,40 +134,113 @@ public class XMLCurrentClikedUserManager {
         StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
         TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
     }
-    /*
-    public void addXML(String filePath, String fileName, String num) throws IOException, ParserConfigurationException,
+    
+     public String searchXML(String filePath, String fileName) throws IOException, ParserConfigurationException,
             SAXException, TransformerConfigurationException, TransformerException {
         xmlFile = new File(filePath, fileName);
         dbFactory = DocumentBuilderFactory.newInstance();
         dBuilder = dbFactory.newDocumentBuilder();
         doc = dBuilder.parse(xmlFile);
-        
+        Node nNode;
+        Element element;
+        String A = "";
         NodeList nList = doc.getElementsByTagName("clikeduser");
         for (int i = 0; i < nList.getLength(); i++) {
-            Node nNode = nList.item(i);
+            System.out.println("nList " +nList.getLength());
+            nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                Element element = (Element) nNode;
-                if (element.getAttribute("status").equals(status)) {
-                    Element feedback = doc.createElement("feedback");
-                    feedback.setAttribute("id", id);
-                    element.appendChild(feedback);
-
-                    Element feedbackDetailContent = doc.createElement("feedbackDetailContent");
-                    feedbackDetailContent.appendChild(doc.createTextNode(feedbackContent));
-                    feedback.appendChild(feedbackDetailContent);
-
-                    Element feedbackDetailTime = doc.createElement("feedbackDetailTime");
-                    feedbackDetailTime.appendChild(doc.createTextNode(feedbackTime.toString()));
-                    feedback.appendChild(feedbackDetailTime);
-                }
+                element = (Element) nNode;
+                NodeList list = nNode.getChildNodes();
+                
+                    for (int j = 0 ; j < list.getLength();j++){
+                        Node nnn = list.item(j);
+                        if("status".equals(nnn.getNodeName())){
+                           A = nnn.getTextContent();
+                        }
+                        
+                    }
+                
             }
         }
-
+        
         doc.getDocumentElement().normalize();
 
         DOMSource xmlDOM = new DOMSource(doc);
         StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
         TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
-    }
-*/
+        
+        return A;
+     }
+     public String searchNameXML(String filePath, String fileName) throws IOException, ParserConfigurationException,
+            SAXException, TransformerConfigurationException, TransformerException {
+        xmlFile = new File(filePath, fileName);
+        dbFactory = DocumentBuilderFactory.newInstance();
+        dBuilder = dbFactory.newDocumentBuilder();
+        doc = dBuilder.parse(xmlFile);
+        Node nNode;
+        Element element;
+        String A = "";
+        NodeList nList = doc.getElementsByTagName("clikeduser");
+        for (int i = 0; i < nList.getLength(); i++) {
+            System.out.println("nList " +nList.getLength());
+            nNode = nList.item(i);
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                element = (Element) nNode;
+                NodeList list = nNode.getChildNodes();
+                
+                    for (int j = 0 ; j < list.getLength();j++){
+                        Node nnn = list.item(j);
+                        if("name".equals(nnn.getNodeName())){
+                           A = nnn.getTextContent();
+                        }
+                        
+                    }
+                
+            }
+        }
+        
+        doc.getDocumentElement().normalize();
+
+        DOMSource xmlDOM = new DOMSource(doc);
+        StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
+        TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
+        
+        return A;
+     }
+     public String searchIdXML(String filePath, String fileName) throws IOException, ParserConfigurationException,
+            SAXException, TransformerConfigurationException, TransformerException {
+        xmlFile = new File(filePath, fileName);
+        dbFactory = DocumentBuilderFactory.newInstance();
+        dBuilder = dbFactory.newDocumentBuilder();
+        doc = dBuilder.parse(xmlFile);
+        Node nNode;
+        Element element;
+        String A = "";
+        NodeList nList = doc.getElementsByTagName("clikeduser");
+        for (int i = 0; i < nList.getLength(); i++) {
+            System.out.println("nList " +nList.getLength());
+            nNode = nList.item(i);
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                element = (Element) nNode;
+                NodeList list = nNode.getChildNodes();
+                
+                    for (int j = 0 ; j < list.getLength();j++){
+                        Node nnn = list.item(j);
+                        if("id".equals(nnn.getNodeName())){
+                           A = nnn.getTextContent();
+                        }
+                        
+                    }
+                
+            }
+        }
+        
+        doc.getDocumentElement().normalize();
+
+        DOMSource xmlDOM = new DOMSource(doc);
+        StreamResult xmlResultFile = new StreamResult(new File(filePath, fileName));
+        TransformerFactory.newInstance().newTransformer().transform(xmlDOM, xmlResultFile);
+        
+        return A;
+     }
 }
