@@ -508,7 +508,7 @@ public class FXMLComplainWriteController implements Initializable {
         
         Complaint c = new Complaint(
                 Integer.toString(num),
-                "a",
+                "b",
                 textFieldTitle.getText(),
                 textAreaContent.getText(),
                 date.toString(),

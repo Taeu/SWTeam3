@@ -104,6 +104,8 @@ public class FXMLMainPageController implements Initializable {
     private ImageView seventh;
     @FXML
     private Button btnFeedbackWrite;
+    @FXML
+    private Button Logout;
 
     /**
      * Initializes the controller class.
@@ -154,6 +156,7 @@ public class FXMLMainPageController implements Initializable {
         HashMap currentUserList = new HashMap();
         data = FXCollections.observableArrayList();
         try {
+            
             currentUserList = currentUser.readXML(fp.xml, "CurrentUser.xml");
             idhm = currentUser.readXML(fp.xml, "CurrentUser.xml");
         } catch (Exception e) {
@@ -207,12 +210,16 @@ public class FXMLMainPageController implements Initializable {
                 btnLogin.setText("customer");
                 btnLogin.setDisable(true);
                 btnFeedbackWrite.setVisible(false);
+                
+         Logout.setVisible(true);
             }
             else if(A.equals("2")){ // brand
                 System.out.println("2");
                 btnLogin.setText("brand");
                 btnLogin.setDisable(true);
                 btnComplainWrite.setVisible(false);
+                
+         Logout.setVisible(true);
                 
                 
             }
@@ -249,11 +256,34 @@ public class FXMLMainPageController implements Initializable {
 
     @FXML
     private void menuMypageCliked(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btnComplainWrite.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLMyPage.fxml"));
+            A="";
+            System.out.println("gggg");
+            try {
+                A = currentUser.searchXML(fp.xml,"CurrentUser.xml");
+            } catch (IOException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (TransformerException ex) {
+                Logger.getLogger(boundary1.FXMLMainPageController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if(A.equals("1")){ // customer
+                
+            }
+            else if(A.equals("2")){ // brand
+            }
+            else return;
+         Stage stageThis;
+        stageThis = (Stage) brandLogo.getScene().getWindow();
+        stageThis.close();
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLmyPage.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        
     }
 
     @FXML
@@ -292,6 +322,48 @@ public class FXMLMainPageController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
+    }
+
+    @FXML
+    private void btnLogoutClicked(ActionEvent event) {
+        // 0 껄 넣어야함
+        int num=0;         // num count 해주어야함.
+        currentUser = new XMLCurrentClickedUserManager();
+        HashMap hm = new HashMap();
+        HashMap idhm = new HashMap();
+        HashMap currentUserList = new HashMap();
+        data = FXCollections.observableArrayList();
+        try {
+            currentUserList = currentUser.readXML(fp.xml, "CurrentUser.xml");
+            idhm = currentUser.readXML(fp.xml, "CurrentUser.xml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Iterator<String> iterator = idhm.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            num = Integer.parseInt(key);
+        }
+        num = num + 1;
+        // num 완료
+        System.out.println("this num : "+num);
+        // id 
+        String id;
+        hm.put("num", Integer.toString(num));
+        hm.put("name","no");
+        hm.put("id", "no");
+        hm.put("status", "0");
+         try {
+                currentUser.createXML(fp.xml, "CurrentUser.xml", hm);
+            } catch (Exception e) {
+            }
+         Logout.setVisible(false);
+         btnLogin.setText("Login");
+         btnLogin.setDisable(false);
+         btnFeedbackWrite.setVisible(true);
+         btnComplainWrite.setVisible(true);
+         btnLogin.setVisible(true);
+         
     }
     
 }

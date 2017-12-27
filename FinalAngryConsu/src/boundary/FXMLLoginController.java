@@ -20,10 +20,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import others.FilePath;
 
@@ -61,6 +63,8 @@ public class FXMLLoginController implements Initializable {
     private RadioButton radioLoginType_b;
     @FXML
     private RadioButton radioLoginType_a;
+    @FXML
+    private Label brandLogo;
 
     /**
      * Initializes the controller class.
@@ -177,6 +181,15 @@ public class FXMLLoginController implements Initializable {
         }
        
          Stage stage = (Stage) btnLogin.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void labelAngryClicked(MouseEvent event) throws IOException {
+         Stage stage = (Stage) brandLogo.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);

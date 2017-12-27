@@ -20,15 +20,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
@@ -47,8 +53,11 @@ public class FXMLmyPageController implements Initializable {
     private HashMap idhm;
     private HashMap tempidhm;
     FilePath fp = new FilePath();
+    private XMLCurrentClickedUserManager currentUser;
+   
+    public String A;
     @FXML
-    private ImageView UserType;
+    private Label UserType;
     @FXML
     private Button btnCustomerRegister;
     @FXML
@@ -68,7 +77,27 @@ public class FXMLmyPageController implements Initializable {
     @FXML
     private Pane brandImg;
     @FXML
-    private Label labelAngry;
+    private Label brandLogo;
+    @FXML
+    private TableView<?> tableViewComplaint;
+    @FXML
+    private TableColumn<?, ?> tableColumnName;
+    @FXML
+    private TableColumn<?, ?> tableColumnId;
+    @FXML
+    private TableColumn<?, ?> tableColumnIndustry;
+    @FXML
+    private TableColumn<?, ?> tableColumnContent;
+    @FXML
+    private TableColumn<?, ?> tableColumnSub;
+    @FXML
+    private TableColumn<?, ?> tableColumnTitle;
+    @FXML
+    private TableColumn<?, ?> tableColumnTime;
+    @FXML
+    private TableColumn<?, ?> tableColumnStatus;
+    @FXML
+    private TextField texFieldUser;
 
     /**
      * Initializes the controller class.
@@ -166,7 +195,28 @@ public class FXMLmyPageController implements Initializable {
     }
 
     @FXML
-    private void labelAngryClicked(MouseEvent event) {
+    private void labelAngryClicked(MouseEvent event) throws IOException {
+        Stage stageThis;
+        stageThis = (Stage) brandLogo.getScene().getWindow();
+        stageThis.close();
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void btnReportClicked(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLReport.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void ComplainReadDetailCliked(MouseEvent event) {
     }
     
 }

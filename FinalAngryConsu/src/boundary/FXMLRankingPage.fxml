@@ -47,7 +47,7 @@
                   </Button>
                </children>
             </Pane>
-            <Label layoutY="-6.0" prefHeight="71.0" prefWidth="1300.0" style="-fx-background-color: black;" text="      Angry Customer" textFill="WHITE">
+            <Label fx:id="brandLogo" layoutY="-6.0" onMouseClicked="#labelAngryClicked" prefHeight="71.0" prefWidth="1300.0" style="-fx-background-color: black;" text="      Angry Customer" textFill="WHITE">
                <font>
                   <Font name="Calisto MT" size="50.0" />
                </font>

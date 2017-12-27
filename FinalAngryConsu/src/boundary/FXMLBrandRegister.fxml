@@ -15,74 +15,75 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeon.FXMLBrandRegisterController">
+
+<ScrollPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLBrandRegisterController">
    <content>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: white;" stylesheets="@../newCascadeStyleSheet2.css">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0">
          <children>
-            <ImageView fitHeight="644.0" fitWidth="1302.0" layoutX="-1.0" layoutY="58.0" opacity="0.37">
+            <ImageView fitHeight="690.0" fitWidth="1302.0" layoutY="15.0" opacity="0.35">
                <image>
                   <Image url="@../images/company1.jpg" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="467.0" layoutY="96.0" prefHeight="98.0" prefWidth="366.0" text="Company register" textAlignment="CENTER">
+            <Label alignment="CENTER" layoutX="928.0" layoutY="178.0" prefHeight="98.0" prefWidth="366.0" text="register" textAlignment="CENTER">
                <font>
                   <Font name="Calisto MT" size="44.0" />
                </font>
             </Label>
-            <Label layoutX="505.0" layoutY="218.0" prefHeight="30.0" prefWidth="100.0" text="ID">
+            <Label layoutX="871.0" layoutY="262.0" prefHeight="30.0" prefWidth="100.0" text="ID">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="textFieldID" layoutX="600.0" layoutY="218.0" prefHeight="20.0" prefWidth="150.0" />
-            <TextField fx:id="textFieldName" layoutX="600.0" layoutY="310.0" prefHeight="20.0" prefWidth="150.0" />
-            <TextField fx:id="textFieldSNSAddress" layoutX="600.0" layoutY="453.0" prefHeight="20.0" prefWidth="150.0" />
-            <TextField fx:id="textFieldEmail" layoutX="600.0" layoutY="500.0" prefHeight="20.0" prefWidth="150.0" />
-            <PasswordField fx:id="passwordFieldPW" layoutX="600.0" layoutY="264.0" prefHeight="20.0" prefWidth="150.0" />
-            <ChoiceBox fx:id="choiceBoxIndustry" layoutX="600.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" />
-            <ChoiceBox fx:id="choiceBoxSales" layoutX="600.0" layoutY="402.0" prefHeight="20.0" prefWidth="150.0" />
+            <TextField fx:id="textFieldID" layoutX="980.0" layoutY="266.0" prefHeight="20.0" prefWidth="150.0" />
+            <TextField fx:id="textFieldName" layoutX="980.0" layoutY="448.0" prefHeight="20.0" prefWidth="150.0" />
+            <TextField fx:id="textFieldSNSAddress" layoutX="980.0" layoutY="328.0" prefHeight="20.0" prefWidth="150.0" />
+            <TextField fx:id="textFieldEmail" layoutX="980.0" layoutY="356.0" prefHeight="20.0" prefWidth="150.0" />
+            <PasswordField fx:id="passwordFieldPW" layoutX="980.0" layoutY="296.0" prefHeight="20.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="choiceBoxIndustry" layoutX="980.0" layoutY="386.0" prefHeight="20.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="choiceBoxSales" layoutX="980.0" layoutY="418.0" prefHeight="20.0" prefWidth="150.0" />
             <Label fx:id="brandLogo" onMouseClicked="#labelAngryCustomerClicked" prefHeight="65.0" prefWidth="1300.0" style="-fx-background-color: black;" text="       Angry Customer" textFill="WHITE">
                <font>
                   <Font name="Calisto MT" size="50.0" />
                </font>
             </Label>
-            <Button layoutX="600.0" layoutY="544.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Complete!" />
-            <Label layoutX="505.0" layoutY="310.0" prefHeight="30.0" prefWidth="100.0" text="Name">
+            <Button layoutX="921.0" layoutY="501.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Complete!" />
+            <Label layoutX="871.0" layoutY="444.0" prefHeight="30.0" prefWidth="100.0" text="Name">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="505.0" layoutY="264.0" prefHeight="30.0" prefWidth="100.0" text="Password">
+            <Label layoutX="871.0" layoutY="292.0" prefHeight="30.0" prefWidth="100.0" text="Password">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="505.0" layoutY="355.0" prefHeight="30.0" prefWidth="100.0" text="Industry">
+            <Label layoutX="871.0" layoutY="382.0" prefHeight="30.0" prefWidth="100.0" text="Industry">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="505.0" layoutY="402.0" prefHeight="30.0" prefWidth="100.0" text="Sales">
+            <Label layoutX="871.0" layoutY="414.0" prefHeight="30.0" prefWidth="100.0" text="Sales">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="505.0" layoutY="453.0" prefHeight="30.0" prefWidth="100.0" text="SNS Address">
+            <Label layoutX="871.0" layoutY="324.0" prefHeight="30.0" prefWidth="100.0" text="SNS Address">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="505.0" layoutY="500.0" prefHeight="30.0" prefWidth="100.0" text="E-mail">
+            <Label layoutX="871.0" layoutY="352.0" prefHeight="30.0" prefWidth="100.0" text="E-mail">
                <font>
                   <Font name="Calisto MT" size="15.0" />
                </font>
             </Label>
-            <ImageView fitHeight="58.0" fitWidth="80.0">
+            <ImageView fitHeight="58.0" fitWidth="80.0" layoutX="-4.0" layoutY="2.0">
                <image>
                   <Image url="@../images/KakaoTalk_20171226_233017063.png" />
                </image>
             </ImageView>
-            <MenuBar layoutX="450.0" layoutY="1.0" prefHeight="50.0" prefWidth="783.0" style="-fx-background-color: black;">
+            <MenuBar layoutX="486.0" layoutY="-2.0" prefHeight="50.0" prefWidth="783.0" style="-fx-background-color: black;">
                <menus>
                   <Menu style="-fx-font-size: 30; -fx-background-color: black; -fx-font-color: white;" text="고객불만  ">
                      <items>

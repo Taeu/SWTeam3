@@ -97,12 +97,12 @@
                               <MenuItem fx:id="menuComplainRead" mnemonicParsing="false" onAction="#menuComplainReadCliked" text="불만조회" />
                            </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" style="-fx-font-size: 25; -fx-background-color: black;" text="랭킹  ">
+                        <Menu mnemonicParsing="false" style="-fx-font-size: 25; -fx-font-color: white; -fx-background-color: black;" text="랭킹  ">
                            <items>
                               <MenuItem fx:id="menuRankView" mnemonicParsing="false" onAction="#menuRankViewCliked" text="랭킹뷰" />
                            </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" style="-fx-font-size: 25;" text="마이페이지">
+                        <Menu mnemonicParsing="false" style="-fx-font-size: 25; -fx-font-color: white; -fx-background-color: black;" text="마이페이지">
                            <items>
                               <MenuItem id="MenuItemMypage" fx:id="menuMypage" mnemonicParsing="false" onAction="#menuMypageCliked" text="마이페이지" />
                            </items>
@@ -125,6 +125,11 @@
                   <Button fx:id="btnFeedbackWrite" layoutX="1150.0" mnemonicParsing="false" onAction="#btnFeedbackWriteCliked" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: black;" text="Feedback" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Logout" layoutX="863.0" mnemonicParsing="false" onAction="#btnLogoutClicked" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: black;" text="Logout" textFill="WHITE" textOverrun="CLIP" visible="false">
+                     <font>
+                        <Font size="22.0" />
                      </font>
                   </Button>
                </children>

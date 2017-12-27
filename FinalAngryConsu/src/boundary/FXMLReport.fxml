@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLReportController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1300.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.FXMLReportController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1450.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-weight: 5;">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1450.0" prefWidth="1300.0" style="-fx-background-color: black; -fx-border-color: black; -fx-border-weight: 5;">
          <children>
             <Label fx:id="labelCounterBrand1" alignment="CENTER" layoutY="60.0" onMouseClicked="#labelCounterBrandCliked" prefHeight="58.0" prefWidth="1300.0" style="-fx-background-color: gray; -fx-font-size: 40; -fx-font-family: bold; -fx-font-color: black;" text="Report for ZARA" textFill="#0a0000">
                <font>
@@ -32,36 +32,36 @@
                   <Image url="@../images/KakaoTalk_20171226_233017063.png" />
                </image>
             </ImageView>
-            <TextArea layoutX="-9.0" layoutY="237.0" prefHeight="200.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 5;" text="춥고 졸리고 배고프고 지쳤습니다.&#10;이제 그만 하고싶습니다.&#10;STOP,,,,">
+            <TextArea layoutX="-9.0" layoutY="272.0" prefHeight="130.0" prefWidth="1300.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 5;" text="&#10;            How to increase your brand reputation index  is provided wtih from the analysis below  ..">
                <font>
-                  <Font name="Calisto MT" size="15.0" />
+                  <Font name="Calisto MT" size="28.0" />
                </font></TextArea>
             <Label alignment="CENTER" layoutX="1.0" layoutY="165.0" prefHeight="71.0" prefWidth="1300.0" style="-fx-background-color: black;" text="Over all Comments" textFill="WHITE">
                <font>
                   <Font name="Calisto MT" size="50.0" />
                </font>
             </Label>
-            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="1.0" layoutY="436.0">
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="2.0" layoutY="462.0">
                <image>
                   <Image url="@../images/1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="306.0" fitWidth="400.0" layoutX="1.0" layoutY="1116.0">
+            <ImageView fitHeight="330.0" fitWidth="400.0" layoutX="1.0" layoutY="1116.0">
                <image>
                   <Image url="@../images/6.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="1.0" layoutY="779.0">
+            <ImageView fitHeight="320.0" fitWidth="400.0" layoutX="2.0" layoutY="793.0">
                <image>
                   <Image url="@../images/4.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="650.0" layoutY="779.0">
+            <ImageView fitHeight="333.0" fitWidth="400.0" layoutX="650.0" layoutY="779.0">
                <image>
                   <Image url="@../images/5.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="650.0" layoutY="436.0">
+            <ImageView fitHeight="304.0" fitWidth="400.0" layoutX="650.0" layoutY="462.0">
                <image>
                   <Image url="@../images/2.png" />
                </image>
@@ -82,11 +82,11 @@
                   <Font name="Calisto MT" size="1.0" />
                </font>
             </Label>
-            <TextArea layoutX="401.0" layoutY="436.0" prefHeight="297.0" prefWidth="252.0" text="이제 안합니다" />
-            <TextArea layoutX="1050.0" layoutY="436.0" prefHeight="298.0" prefWidth="232.0" text="진심입니다" />
-            <TextArea layoutX="398.0" layoutY="780.0" prefHeight="298.0" prefWidth="252.0" text="배고파요" />
-            <TextArea layoutX="1048.0" layoutY="780.0" prefHeight="298.0" prefWidth="252.0" text="그만해" />
-            <TextArea layoutX="401.0" layoutY="1120.0" prefHeight="298.0" prefWidth="252.0" text="안ㄷ돼" />
+            <TextArea layoutX="414.0" layoutY="610.0" prefHeight="100.0" prefWidth="220.0" text="&#10;&#10;      BCI is not enought to satisfy &#10;               your customer&#10;" />
+            <TextArea layoutX="1066.0" layoutY="610.0" prefHeight="100.0" prefWidth="220.0" text="&#10;&#10;      this is show that specific&#10;     industry analysis is super&#10;        imporatant" />
+            <TextArea layoutX="412.0" layoutY="970.0" prefHeight="100.0" prefWidth="220.0" text="          &#10;&#10;      your speed is very good." />
+            <TextArea layoutX="412.0" layoutY="1185.0" prefHeight="227.0" prefWidth="854.0" text="&#10;&#10;   Our Solution that we want to give you is &#10;&#10;            you have to be more kind , have kindness &#10;&#10;            when you give feedback as add with priceless things to Customer as possible as you can.&#10;&#10;            also need to explain which information from where, and how the solution can be effective to solve your customer's problem.&#10;&#10;" />
+            <TextArea layoutX="1062.0" layoutY="970.0" prefHeight="100.0" prefWidth="220.0" text="          &#10;&#10;      You really need to explain&#10;   more datail about the feedback." />
          </children></AnchorPane>
   </content>
 </ScrollPane>
